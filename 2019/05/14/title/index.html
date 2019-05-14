@@ -116,14 +116,19 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&amp;gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不">
+<meta property="og:type" content="article">
 <meta property="og:title" content="面试总结">
 <meta property="og:url" content="http://yoursite.com/2019/05/14/title/index.html">
 <meta property="og:site_name" content="My blog">
+<meta property="og:description" content="重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&amp;gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-14T09:11:27.114Z">
+<meta property="og:image" content="http://yoursite.com/2019/05/14/title/images/1.jpg">
+<meta property="og:updated_time" content="2019-05-14T10:35:26.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结">
+<meta name="twitter:description" content="重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&amp;gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不">
+<meta name="twitter:image" content="http://yoursite.com/2019/05/14/title/images/1.jpg">
 
 
 
@@ -372,7 +377,7 @@
                 
               
 
-              <time title="创建时间：2019-05-14 08:51:07 / 修改时间：17:11:27" itemprop="dateCreated datePublished" datetime="2019-05-14T08:51:07+08:00">2019-05-14</time>
+              <time title="创建时间：2019-05-14 08:51:07 / 修改时间：18:35:26" itemprop="dateCreated datePublished" datetime="2019-05-14T08:51:07+08:00">2019-05-14</time>
             
 
             
@@ -411,7 +416,107 @@
       
 
       
-        
+        <h1 id="重载（Overload）和重写（Override）的区别？"><a href="#重载（Overload）和重写（Override）的区别？" class="headerlink" title="重载（Overload）和重写（Override）的区别？"></a>重载（Overload）和重写（Override）的区别？</h1><p>方法的重载和重写都是实现多态的方式&gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不能比父类被重写方法声明更多的异常（里氏代换原则）。重载对返回类型没有特殊的要求，不能根据返回类型进行区分</p>
+<h1 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h1><p>1.抽象类和接口都不能实例化对象,但是可以定义抽象类和接口类型的引用.<br>2.继承抽象类和实现接口都要对其中的抽象方法全部实现<br>3.接口比抽象类更加抽象,抽象类中可以定义构造器,可以有抽象方法和具体方法.<br>4.接口中方法全部都是抽象方法.<br>5.抽象类中的成员可以是private,protected,public,接口全部都是public<br>6.抽象类中可以定义成员变量,而接口中定义的成员变量实际上都是常量.<br>7.有抽象方法的类必须声明为抽象类,而抽象类未必要有抽象方法.</p>
+<h1 id="什么是AQS"><a href="#什么是AQS" class="headerlink" title="什么是AQS?"></a>什么是AQS?</h1><p>AQS核心思想是，如果被请求的共享资源空闲，则将当前请求资源的线程设置为有效的工作线程，并且将共享资源设置为锁定状态。如果被请求的共享资源被占用，那么就需要一套线程阻塞等待以及被唤醒时锁分配的机制，这个机制AQS是用CLH队列锁实现的，即将暂时获取不到锁的线程加入到队列中。<br>CLH(Craig,Landin,and Hagersten)队列是一个虚拟的双向队列（虚拟的双向队列即不存在队列实例，仅存在结点之间的关联关系）。AQS是将每条请求共享资源的线程封装成一个CLH锁队列的一个结点（Node）来实现锁的分配。<br>AQS是抽象同步队列AbstractQueuedSynchronizer的简称,是实现同步机制的基础,并发包中的各种所谓的锁就是通过AQS实现的。</p>
+<h1 id="什么是CAS？"><a href="#什么是CAS？" class="headerlink" title="什么是CAS？"></a>什么是CAS？</h1><p>CAS(Compare And Swap)，即比较并交换。是解决多线程并行情况下使用锁造成性能损耗的一种机制，CAS操作包含三个操作数——内存位置（V）、预期原值（A）和新值(B)。如果内存位置的值与预期原值相匹配，那么处理器会自动将该位置值更新为新值。否则，处理器不做任何操作。无论哪种情况，它都会在CAS指令之前返回该位置的值。CAS有效地说明了“我认为位置V应该包含值A；如果包含该值，则将B放到这个位置；否则，不要更改该位置，只告诉我这个位置现在的值即可。</p>
+<h1 id="IO-NIO-AIO"><a href="#IO-NIO-AIO" class="headerlink" title="IO,NIO,AIO"></a>IO,NIO,AIO</h1><p>io又叫bio，意思同步阻塞io，使用bio的时候，你需要不断的等待数据的到达，直到完成了这一次的io请求。对应于服务器的模式就是，客户端发起一次链接请求，那么服务器就产生一个线程来处理。<br>nio 是同步非阻塞io，使用nio时，你不必一直等服务器的回应，你可以在发起服务器的io请求之后去做别的事情，但是需要不断的去轮询服务器来检查状态。<br>aio 异步非阻塞io，一个有效请求使用一个线程来处理。处理对应的请求之前会先让os来进行处理，之后再调用对应的线程来处理。</p>
+<h1 id="Java-内存模型"><a href="#Java-内存模型" class="headerlink" title="Java 内存模型"></a>Java 内存模型</h1><p>Java内存模型即Java Memory Model，简称JMM。JMM定义了Java 虚拟机(JVM)在计算机内存(RAM)中的工作方式。程序中的变量存储在主内存中，每个线程拥有自己的工作内存并存放变量的拷贝，线程读写自己的工作内存，通过主内存进行变量的交互。JMM就是规定了工作内存和主内存之间变量访问的细节，通过保障原子性、有序性、可见性来实现线程的有效协同和数据的安全。</p>
+<h1 id="说说JVM的垃圾回收策略"><a href="#说说JVM的垃圾回收策略" class="headerlink" title="说说JVM的垃圾回收策略"></a>说说JVM的垃圾回收策略</h1><p>JVM采用分代垃圾回收。在JVM的内存空间中把堆空间分为年老代和年轻代。将大量创建了没多久就会消亡的对象存储在年轻代，而年老代中存放生命周期长久的实例对象。</p>
+<h1 id="对象存活检查-可达性分析算法，引用计数法"><a href="#对象存活检查-可达性分析算法，引用计数法" class="headerlink" title="对象存活检查(可达性分析算法，引用计数法)"></a>对象存活检查(可达性分析算法，引用计数法)</h1><p>1、引用计数算法<br>给对象中添加一个引用计数器，每当有一个地方引用它时，计数器值就加1；当引用失效时，计数器值就减1；任何时刻计数器为0的对象就是不可能再被使用的。<br>但是，JVM里面并没有选用引用计数算法来管理内存，主要原因是它很难解决对象之间相互循环引用的问题。<br>2、可达性分析算法<br>通过一系列的称为“GC Roots”的对象作为起始点，从这些节点开始向下搜索，搜索所走过的路径称为引用链(Reference Chain)，当一个对象到GC Roots没有任何引用链相连时，则证明此对象是不可用的。</p>
+<h1 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h1><p>如进程、线程同步，可理解为进程或线程A和B一块配合，A执行到一定程度时要依靠B的某个结果，于是停下来，示意B运行；B依言执行，再将结果给A；A再继续操作。<br>所谓同步，就是在发出一个功能调用时，在没有得到结果之前，该调用就不返回，同时其它线程也不能调用这个方法。按照这个定义，其实绝大多数函数都是同步调用（例如sin, isdigit等）。但是一般而言，我们在说同步、异步的时候，特指那些需要其他部件协作或者需要一定时间完成的任务。例如Window API函数SendMessage。该函数发送一个消息给某个窗口，在对方处理完消息之前，这个函数不返回。当对方处理完毕以后，该函数才把消息处理函数所返回的LRESULT值返回给调用者。<br>在多线程编程里面，一些敏感数据不允许被多个线程同时访问，此时就使用同步访问技术，保证数据在任何时刻，最多有一个线程访问，以保证数据的完整性。</p>
+<h1 id="什么是UML"><a href="#什么是UML" class="headerlink" title="什么是UML"></a>什么是UML</h1><p>UML是统一建模语言（UML是 Unified Modeling Language的缩写）是用来对软件密集系统进行可视化建模的一种语言。UML为面向对象开发系统的产品进行说明、可视化、和编制文档的一种标准语言。<br>统一建模语言 (UML)是非专利的第三代建模和规约语言。 UML是在开发阶段，说明，可视化，构建和书写一个面向对象软件密集系统的制品的开放方法。UML展现了一系列最佳工程实践，这些最佳实践在对大规模，复杂系统进行建模方面,特别是在软件架构层次已经被验证有效。<br>UML可以贯穿软件开发周期中的每一个阶段。被OMG采纳作为业界的标准。<br>UML最适于数据建模，业务建模，对象建模，组件建模。<br>UML作为一种模型语言，它使开发人员专注于建立产品的模型和结构，而不是选用什么程序语言和算法实现。当模型建立之后，模型可以被UML工具转化成指定的程序语言代码。<br>IBM的Rational Rose和MS的Visio都是UML工具。</p>
+<h1 id="什么是ACID"><a href="#什么是ACID" class="headerlink" title="什么是ACID"></a>什么是ACID</h1><p>事务的四个基本特征：<br>Atomic（原子性）：事务中包含的操作被看做一个逻辑单元，这个逻辑单元中的操作要么全部成 功，要么全部失败。<br>Consistency（一致性）：事务完成时，数据必须处于一致状态，数据的完整性约束没有被破坏，事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。<br>Isolation（隔离性）：事务允许多个用户对同一个数据进行并发访问，而不破坏数据的正确性 和完整性。同时，并行事务的修改必须与其他并行事务的修改相互独立。<br>Durability（持久性）：事务结束后，事务处理的结果必须能够得到固化。</p>
+<h1 id="Java内存区域划分"><a href="#Java内存区域划分" class="headerlink" title="Java内存区域划分"></a>Java内存区域划分</h1><p>大多数 JVM 将内存区域划分为 Method Area（Non-Heap）（方法区） ,Heap（堆） , Program Counter Register（程序计数器） ,   VM Stack（虚拟机栈，也有翻译成JAVA 方法栈的）,Native Method Stack  （ 本地方法栈 ），其中Method Area 和  Heap 是线程共享的  ，VM Stack，Native Method Stack  和Program Counter Register  是非线程共享的。<br>为什么分为 线程共享和非线程共享的呢?请继续往下看。<br>首先我们熟悉一下一个一般性的 Java 程序的工作过程。一个 Java 源程序文件，会被编译为字节码文件（以 class 为扩展名），每个java程序都需要运行在自己的JVM上，然后告知 JVM 程序的运行入口，再被 JVM 通过字节码解释器加载运行。那么程序开始运行后，都是如何涉及到各内存区域的呢？<br>概括地说来，JVM初始运行的时候都会分配好 Method Area（方法区） 和Heap（堆） ，而JVM 每遇到一个线程，就为其分配一个 Program Counter Register（程序计数器） ,   VM Stack（虚拟机栈）和Native Method Stack  （本地方法栈）， 当线程终止时，三者（虚拟机栈，本地方法栈和程序计数器）所占用的内存空间也会被释放掉。这也是为什么我把内存区域分为线程共享和非线程共享的原因，非线程共享的那三个区域的生命周期与所属线程相同，而线程共享的区域与JAVA程序运行的生命周期相同，所以这也是系统垃圾回收的场所只发生在线程共享的区域（实际上对大部分虚拟机来说知发生在Heap上）的原因。</p>
+<h1 id="Spring事务传播特性"><a href="#Spring事务传播特性" class="headerlink" title="Spring事务传播特性"></a>Spring事务传播特性</h1><p>PROPAGATION_REQUIRED–支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。<br>PROPAGATION_SUPPORTS–支持当前事务，如果当前没有事务，就以非事务方式执行。<br>PROPAGATION_MANDATORY–支持当前事务，如果当前没有事务，就抛出异常。<br>PROPAGATION_REQUIRES_NEW–新建事务，如果当前存在事务，把当前事务挂起。<br>PROPAGATION_NOT_SUPPORTED–以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。<br>PROPAGATION_NEVER–以非事务方式执行，如果当前存在事务，则抛出异常。</p>
+<h1 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h1><p>Servlet的生命周期分为5个阶段：加载、创建、初始化、处理客户请求、卸载。<br>(1)加载：容器通过类加载器使用servlet类对应的文件加载servlet<br>(2)创建：通过调用servlet构造函数创建一个servlet对象<br>(3)初始化：调用init方法初始化<br>(4)处理客户请求：每当有一个客户请求，容器会创建一个线程来处理客户请求<br>(5)卸载：调用destroy方法让servlet自己释放其占用的资源</p>
+<p>init方法： 是在servlet实例创建时调用的方法，用于创建或打开任何与servlet相的资源和初始 化servlet的状态，Servlet规范保证调用init方法前不会处理任何请求<br> service方法：是servlet真正处理客户端传过来的请求的方法，由web容器调用， 根据HTTP请求方法（GET、POST等），将请求分发到doGet、doPost等方法<br>destory方法：是在servlet实例被销毁时由web容器调用。Servlet规范确保在destroy方法调用之 前所有请求的处理均完成，需要覆盖destroy方法的情况：释放任何在init方法中 打开的与servlet相关的资源存储servlet的状态</p>
+<h1 id="加载驱动的方法"><a href="#加载驱动的方法" class="headerlink" title="加载驱动的方法"></a>加载驱动的方法</h1><p>1.Class.forName(“com.microsoft.sqlserver.jdbc.SQLServerDriver”);</p>
+<ol start="2">
+<li>DriverManager.registerDriver(new com.mysql.jdbc.Driver());<br>3.System.setProperty(“jdbc.drivers”, “com.mysql.jdbc.Driver”);<h1 id="JVM内存配置参数"><a href="#JVM内存配置参数" class="headerlink" title="JVM内存配置参数"></a>JVM内存配置参数</h1>-Xmx：最大堆大小<br>-Xms：初始堆大小<br>-Xmn:年轻代大小<br>-XXSurvivorRatio：年轻代中Eden区与Survivor区的大小比值<h1 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h1>前序：根左右<br>中序：左根右<br>后序：左右根<h1 id="B-、B-树"><a href="#B-、B-树" class="headerlink" title="B+、B-树"></a>B+、B-树</h1>二叉搜索树：<br>1.所有非叶子结点至多拥有两个儿子（Left和Right）；<br>2.所有结点存储一个关键字；<br>3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；<br><img src="images/1.jpg" alt="二叉搜索树"><br>二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入<br>右儿子；如果左儿子或右儿子的指针为空，则报告找不到相应的关键字。<br>B-树：<br>是一种多路搜索树（并不是二叉的）：<br>1.定义任意非叶子结点最多只有M个儿子；且M&gt;2；<br>2.根结点的儿子数为[2, M]；<br>3.除根结点以外的非叶子结点的儿子数为[M/2, M]；<br>4.每个结点存放至少M/2-1（取上整）和至多M-1个关键字；（至少2个关键字）<br>5.非叶子结点的关键字个数=指向儿子的指针个数-1；<br>6.非叶子结点的关键字：K[1], K[2], …, K[M-1]；且K[i] &lt; K[i+1]；<br>7.非叶子结点的指针：P[1], P[2], …, P[M]；其中P[1]指向关键字小于K[1]的子树，P[M]指向关键字大于K[M-1]的子树，其它P[i]指向关键字属于(K[i-1], K[i])的子树；<br>8.所有叶子结点位于同一层；<br>B-树的搜索，从根结点开始，对结点内的关键字（有序）序列进行二分查找，如果命中则结束，否则进入查询关键字所属范围的儿子结点；重复，直到所对应的儿子指针为空，或已经是叶子结点；<br>B+树：<br>B+树是B-树的变体，也是一种多路搜索树：<br>1.其定义基本与B-树同，除了：<br>2.非叶子结点的子树指针与关键字个数相同；<br>3.非叶子结点的子树指针P[i]，指向关键字值属于[K[i], K[i+1])的子树（B-树是开区间）；<br>5.为所有叶子结点增加一个链指针；<br>6.所有关键字都在叶子结点出现；<br>B+的搜索与B-树也基本相同，区别是B+树只有达到叶子结点才命中（B-树可以在非叶子结点命中），其性能也等价于在关键字全集做一次二分查找。<h1 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h1>哈夫曼树，又称最优树，是一类带权路径长度最短的树。<br>从树中一个结点到另一个结点之间的分支构成两个结点的路径，路径上的分支数目叫做路径长度。<br>树的路径长度是从树根到每一个结点的路径长度之和。<br>结点的带权路径长度为从该结点到树根之间的路径长度与结点上权的乘积。<br>树的带权路径长度为树中所有叶子结点的带权路径长度之和，通常记作WPL。<br>创建哈夫曼树：<br>假设有n个结点，n个结点的权值分别为w1,w2,…,wn，构成的二叉树的集合为F={T1,T2,…,Tn}，则可构造一棵含有n个叶子结点的哈夫曼树。步骤如下：<br>（1）从F中选取两棵根结点权值最小的树作为左右子树构造一棵新的二叉树，其新的二叉树的权值为其左右子树根结点权值之和；<br>（2）从F中删除上一步选取的两棵二叉树，将新构造的树放到F中；<br>（3）重复（1）（2），直到F只含一棵树为止。</li>
+</ol>
+<h1 id="冒泡、插入、选择、希尔排序"><a href="#冒泡、插入、选择、希尔排序" class="headerlink" title="冒泡、插入、选择、希尔排序"></a>冒泡、插入、选择、希尔排序</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>基本的逻辑是，取第一个元素与后一个比较，如果大于后者，就与后者互换位置，不大于，就保持位置不变。再拿第二个元素与后者比较，如果大于后者，就与后者互换位置。一轮比较之后，最大的元素就移动到末尾。相当于最大的就冒出来了。再进行第二轮，第三轮，直到排序完毕。<br>平均情况时间复杂度为O(n^2)。</p>
+<p>public int[] bubbleSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i = 1; i &lt; n; i++) {<br>boolean flag = false; // 开关，当某次内层循环，没有数据交换时，已排好顺序，直接跳出循环。<br>            for (int j = 0; j &lt; n - i; j++) {<br>                if (a[j] &gt; a[j + 1]) {<br>                    int temp = a[j];<br>                    a[j] = a[j + 1];<br>                    a[j + 1] = temp;<br>                    flag = true;<br>                }<br>            }<br>            if (!flag) {<br>                break;<br>            }<br>        }<br>        return a;<br>    }</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>基本逻辑是，把元素分为已排序的和未排序的。每次从未排序的元素取出第一个，与已排序的元素从尾到头逐一比较，找到插入点，将之后的元素都往后移一位，腾出位置给该元素。<br>平均情况时间复杂度是O(n^2)。</p>
+<p>public int[] insertSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i = 1; i &lt; n; i++) {<br>            int temp = a[i];<br>            int j = i - 1;<br>            for (; j &gt;= 0; j–) {<br>                if (a[j] &gt; temp) {<br>                    a[j + 1] = a[j]; // 比temp 大的已排序数据后移一位<br>                } else {<br>                    break;<br>                }<br>            }<br>            a[j + 1] = temp; // 空出来的位置，把temp放进去<br>        }<br>        return a;<br>    }</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>基本逻辑是：把所有数据分为已排序区间和未排序区间。每次从未排序区间中，选出最小值，之后将该值与未排序区间第一个元素互换位置，此时已排序区间元素个数多了一个，未排序区间内的元素少了一个。如此循环直到未排序区间没有元素为止。<br>平均情况时间复杂度是O(n^2)。</p>
+<p>public int[] selectionSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i =1; i &lt; n; i++) {<br>            int j = i-1;<br>            int min = a[j]; // 最小的数值<br>            int index = j; // 最小值对应的下标<br>            for (; j &lt; n-1 ; j++) {<br>                if (min &gt; a[j+1]) {<br>                    min = a[j+1];<br>                    index = j+1;<br>                }<br>            }<br>            //最小值a[index]与放未排序的首位a[i-1]互换位置<br>            if (index != i-1) {<br>                int temp = a[i-1];<br>                a[i-1] = a [index];<br>                a [index] = temp;<br>            }<br>        }<br>        return a;<br>    }</p>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。<br>时间复杂度是O(n^2)。</p>
+<p>/*<em>希尔排序的原理:根据需求，如果你想要结果从大到小排列，它会首先将数组进行分组，然后将较大值移到前面，较小值移到后面，最后将整个数组进行插入排序，这样比起一开始就用插入排序减少了数据交换和移动的次数，可以说希尔排序是加强版的插入排序<br>拿数组5, 2, 8, 9, 1, 3，4来说，数组长度为7，当increment为3时，数组分为两个序列5，2，8和9，1，3，4，第一次排序，9和5比较，1和2比较，3和8比较，4和比其下标值小increment的数组值相比较<br>此例子是按照从大到小排列，所以大的会排在前面，第一次排序后数组为9, 2, 8, 5, 1, 3，4<br>第一次后increment的值变为3/2=1,此时对数组进行插入排序，实现数组从大到小排
+ </em>/</p>
+<pre><code>public static void shellSort(int[] data) 
+{
+    int j = 0;
+    int temp = 0;
+    //每次将步长缩短为原来的一半
+    for (int increment = data.length / 2; increment &gt; 0; increment /= 2)
+    {
+    for (int i = increment; i &lt; data.length; i++) 
+    {
+        temp = data[i];
+        for (j = i; j &gt;= increment; j -= increment) 
+        {
+        if(temp &gt; data[j - increment])//如想从小到大排只需修改这里
+        {   
+            data[j] = data[j - increment];
+        }
+        else
+        {
+            break;
+        }
+
+        } 
+        data[j] = temp;
+    }
+
+    }
+}
+</code></pre><h1 id="归并、快速、堆排序"><a href="#归并、快速、堆排序" class="headerlink" title="归并、快速、堆排序"></a>归并、快速、堆排序</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>如果要排序一个数组，我们先把数组从中间分成前后两个部分，然后对前后两个部分分别排序，再将两个部分合并在一直，这个整个数组就是一个有序的数组了。<br>平均情况时间复杂度是O(nlogn)。</p>
+<p>   public static int[] sort(int[] nums, int low, int high) {<br>        int mid = (low + high) / 2;<br>        if (low &lt; high) {<br>            // 左边<br>            sort(nums, low, mid);<br>            // 右边<br>            sort(nums, mid + 1, high);<br>            // 左右归并<br>            merge(nums, low, mid, high);<br>        }<br>        return nums;<br>    }</p>
+<pre><code>/**
+ * 将数组中low到high位置的数进行排序
+ * @param nums 待排序数组
+ * @param low 待排的开始位置
+ * @param mid 待排中间位置
+ * @param high 待排结束位置
+ */
+public static void merge(int[] nums, int low, int mid, int high) {
+    int[] temp = new int[high - low + 1];
+    int i = low;// 左指针
+    int j = mid + 1;// 右指针
+    int k = 0;
+    // 把较小的数先移到新数组中
+    while (i &lt;= mid &amp;&amp; j &lt;= high) {
+        if (nums[i] &lt; nums[j]) {
+            temp[k++] = nums[i++];
+        } else {
+            temp[k++] = nums[j++];
+        }
+    }
+    // 把左边剩余的数移入数组
+    while (i &lt;= mid) {
+        temp[k++] = nums[i++];
+    }
+    // 把右边边剩余的数移入数组
+    while (j &lt;= high) {
+        temp[k++] = nums[j++];
+    }
+
+    // 把新数组中的数覆盖nums数组
+    for (int k2 = 0; k2 &lt; temp.length; k2++) {
+        nums[k2 + low] = temp[k2];
+    }
+}
+</code></pre><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序（Quicksort）算法也是利用分治思想，有点像归并排序，但思路不一样。待会我们再讲两者的区别。它的思想是这样的：如果要排序的数组中下标从p到r 之间的一组数据，我们选择 p 到 r 之间的任意一个数据作为pivot(分区点)。<br>我们遍历 p 到 r 之间的数据，将小于 pivot 的放在左边，将大于 pivot 的放到右边，将pivot放到中间。经过这一步骤，数组 p 到 r 之间数据被分成了三个部分，前面 p 到 q-1 之间的都是小于pivot的，中间是pivot,后面的 q+1到 r 之间的是大于pivot的。</p>
+<p>我们用递归排序下标从p 到 q-1 之间的数据和下标从q+1到 r 之间的数据，直到分区缩小为1，这时所有的数据就都有序了。<br>平均情况时间复杂度是O(nlogn)。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆是一种特殊的树形数据结构，其每个节点都有一个值，通常提到的堆都是指一颗完全二叉树，根结点的值小于（或大于）两个子节点的值，同时，根节点的两个子树也分别是一个堆。</p>
+<p>堆排序就是利用堆（假设利用大顶堆）进行排序的方法。它的基本思想是，将待排序的序列构造成一个大顶堆。此时，整个序列的最大值就是堆顶的根节点。将它移走（其实就是将其与堆数组的末尾元素交换，此时末尾元素就是最大值），然后将剩余的 n-1 个序列重新构造成一个堆，这样就会得到 n 个元素中次大的值。如此反复执行，便能得到一个有序序列了。</p>
+<h1 id="三次握手四次分手"><a href="#三次握手四次分手" class="headerlink" title="三次握手四次分手"></a>三次握手四次分手</h1><h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><p>第一次握手：主机A发送位码为syn＝1,随机产生seq number=x的数据包到服务器，客户端进入SYN_SEND状态，等待服务器的确认；主机B由SYN=1知道，A要求建立联机；<br>第二次握手：主机B收到请求后要确认联机信息，向A发送ack number(主机A的seq+1),syn=1,ack=1,随机产生seq=y的包,此时服务器进入SYN_RECV状态;<br>第三次握手：主机A收到后检查ack number是否正确，即第一次发送的seq number+1,以及位码ack是否为1，若正确，主机A会再发送ack number(主机B的seq+1),ack=1，主机B收到后确认seq值与ack=1则连接建立成功。客户端和服务器端都进入ESTABLISHED状态，完成TCP三次握手。</p>
+<h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><p>第一次挥手：主机1（可以使客户端，也可以是服务器端），设置Sequence Number和Acknowledgment Number，向主机2发送一个FIN报文段；此时，主机1进入FIN_WAIT_1状态；这表示主机1没有数据要发送给主机2了；<br>第二次挥手：主机2收到了主机1发送的FIN报文段，向主机1回一个ACK报文段，Acknowledgment Number为Sequence Number加1；主机1进入FIN_WAIT_2状态；主机2告诉主机1，我也没有数据要发送了，可以进行关闭连接了；<br>第三次挥手：主机2向主机1发送FIN报文段，请求关闭连接，同时主机2进入CLOSE_WAIT状态；<br>第四次挥手：主机1收到主机2发送的FIN报文段，向主机2发送ACK报文段，然后主机1进入TIME_WAIT状态；主机2收到主机1的ACK报文段以后，就关闭连接；此时，主机1等待2MSL后依然没有收到回复，则证明Server端已正常关闭，那好，主机1也可以关闭连接了。</p>
+<h1 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h1><p>线程也是有从产生到死亡的过程，其中包含了“创建”、“就绪”、“运行”、“阻塞”、“死亡”，这5个步骤。<br>   新建状态:<br>    使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 start() 这个线程。<br>    就绪状态:<br>    当线程对象调用了start()方法之后，该线程就进入就绪状态。就绪状态的线程处于就绪队列中，要等待JVM里线程调度器的调度。<br>    运行状态:<br>    如果就绪状态的线程获取 CPU 资源，就可以执行 run()，此时线程便处于运行状态。处于运行状态的线程最为复杂，它可以变为阻塞状态、就   绪状态和死亡状态。<br>    阻塞状态:<br>    如果一个线程执行了sleep（睡眠）、suspend（挂起）等方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或   获得设备资源后可以重新进入就绪状态。可以分为三种：<br>    等待阻塞：运行状态中的线程执行 wait() 方法，使线程进入到等待阻塞状态。<br>    同步阻塞：线程在获取 synchronized 同步锁失败(因为同步锁被其他线程占用)。<br>    其他阻塞：通过调用线程的 sleep() 或 join() 发出了 I/O 请求时，线程就会进入到阻塞状态。当sleep() 状态超时，join() 等待线程终止或超时，或者 I/O 处理完毕，线程重新转入就绪状态。<br>    死亡状态:<br>一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。</p>
+<p>简单记忆线程安全的集合类： 喂！SHE！  喂是指  vector，S是指 stack， H是指    hashtable，E是指：Eenumeration。</p>
+<h1 id="JSP四大作用域"><a href="#JSP四大作用域" class="headerlink" title="JSP四大作用域"></a>JSP四大作用域</h1><p>page (作用范围最小)：存储在pageContext对象中的属性仅可以被当前JSP页面的当前响应过程中调用的各个组件访问，例如，正在响应当前请求的JSP页面和它调用的各个自定义标签类。<br>request：存储在request对象中的属性可以被属于同一个请求的所有Servlet和JSP页面访问（在有转发的情况下可以跨页面获取属性值），例如使用PageContext.forward和PageContext.include方法连接起来的多个Servlet和JSP页面。<br>session：存储在session对象中的属性可以被属于同一个会话（浏览器打开直到关闭称为一次会话，且在此期间会话不失效）的所有Servlet和JSP页面访问。<br>application（作用范围最大）：存储在application对象中的属性可以被同一个WEB应用程序中的所有Servlet和JSP页面访问。（属性作用范围最大）。</p>
+
       
     </div>
 
@@ -477,8 +582,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -526,6 +640,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重载（Overload）和重写（Override）的区别？"><span class="nav-number">1.</span> <span class="nav-text">重载（Overload）和重写（Override）的区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口和抽象类的区别"><span class="nav-number">2.</span> <span class="nav-text">接口和抽象类的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是AQS"><span class="nav-number">3.</span> <span class="nav-text">什么是AQS?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是CAS？"><span class="nav-number">4.</span> <span class="nav-text">什么是CAS？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO-NIO-AIO"><span class="nav-number">5.</span> <span class="nav-text">IO,NIO,AIO</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-内存模型"><span class="nav-number">6.</span> <span class="nav-text">Java 内存模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说说JVM的垃圾回收策略"><span class="nav-number">7.</span> <span class="nav-text">说说JVM的垃圾回收策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象存活检查-可达性分析算法，引用计数法"><span class="nav-number">8.</span> <span class="nav-text">对象存活检查(可达性分析算法，引用计数法)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程同步"><span class="nav-number">9.</span> <span class="nav-text">进程同步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是UML"><span class="nav-number">10.</span> <span class="nav-text">什么是UML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是ACID"><span class="nav-number">11.</span> <span class="nav-text">什么是ACID</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java内存区域划分"><span class="nav-number">12.</span> <span class="nav-text">Java内存区域划分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring事务传播特性"><span class="nav-number">13.</span> <span class="nav-text">Spring事务传播特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Servlet的生命周期"><span class="nav-number">14.</span> <span class="nav-text">Servlet的生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加载驱动的方法"><span class="nav-number">15.</span> <span class="nav-text">加载驱动的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM内存配置参数"><span class="nav-number">16.</span> <span class="nav-text">JVM内存配置参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二叉树遍历"><span class="nav-number">17.</span> <span class="nav-text">二叉树遍历</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-、B-树"><span class="nav-number">18.</span> <span class="nav-text">B+、B-树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哈夫曼树"><span class="nav-number">19.</span> <span class="nav-text">哈夫曼树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡、插入、选择、希尔排序"><span class="nav-number">20.</span> <span class="nav-text">冒泡、插入、选择、希尔排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">20.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">20.2.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">20.3.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">20.4.</span> <span class="nav-text">希尔排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#归并、快速、堆排序"><span class="nav-number">21.</span> <span class="nav-text">归并、快速、堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">21.1.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">21.2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">21.3.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三次握手四次分手"><span class="nav-number">22.</span> <span class="nav-text">三次握手四次分手</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三次握手"><span class="nav-number">22.1.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四次挥手"><span class="nav-number">22.2.</span> <span class="nav-text">四次挥手</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全"><span class="nav-number">23.</span> <span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSP四大作用域"><span class="nav-number">24.</span> <span class="nav-text">JSP四大作用域</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
