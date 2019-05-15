@@ -117,18 +117,31 @@
 
 
   <meta name="description" content="重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&amp;gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不">
+<meta name="keywords" content="垃圾回收机制,进程问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试总结">
 <meta property="og:url" content="http://yoursite.com/2019/05/14/title/index.html">
 <meta property="og:site_name" content="My blog">
 <meta property="og:description" content="重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&amp;gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/2019/05/14/title/images/1.jpg">
-<meta property="og:updated_time" content="2019-05-14T10:35:26.236Z">
+<meta property="og:image" content="http://yoursite.com/myimages/1.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/2.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/3.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/4.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/5.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/6.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/7.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/8.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/9.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/10.png">
+<meta property="og:image" content="http://yoursite.com/myimages/11.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/12.png">
+<meta property="og:image" content="http://yoursite.com/myimages/13.png">
+<meta property="og:updated_time" content="2019-05-15T09:02:38.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结">
 <meta name="twitter:description" content="重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&amp;gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不">
-<meta name="twitter:image" content="http://yoursite.com/2019/05/14/title/images/1.jpg">
+<meta name="twitter:image" content="http://yoursite.com/myimages/1.jpg">
 
 
 
@@ -250,6 +263,23 @@
         
         
           
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
           <li class="menu-item menu-item-categories">
 
     
@@ -283,6 +313,14 @@
 
       
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
     </ul>
   
 
@@ -291,6 +329,27 @@
 
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -377,17 +436,47 @@
                 
               
 
-              <time title="创建时间：2019-05-14 08:51:07 / 修改时间：18:35:26" itemprop="dateCreated datePublished" datetime="2019-05-14T08:51:07+08:00">2019-05-14</time>
+              <time title="创建时间：2019-05-14 08:51:07" itemprop="dateCreated datePublished" datetime="2019-05-14T08:51:07+08:00">2019-05-14</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-15 17:02:38" itemprop="dateModified" datetime="2019-05-15T17:02:38+08:00">2019-05-15</time>
               
             
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -399,6 +488,34 @@
 
           
 
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">12k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">11 分钟</span>
+              
+            </div>
           
 
           
@@ -433,15 +550,65 @@
 <p>init方法： 是在servlet实例创建时调用的方法，用于创建或打开任何与servlet相的资源和初始 化servlet的状态，Servlet规范保证调用init方法前不会处理任何请求<br> service方法：是servlet真正处理客户端传过来的请求的方法，由web容器调用， 根据HTTP请求方法（GET、POST等），将请求分发到doGet、doPost等方法<br>destory方法：是在servlet实例被销毁时由web容器调用。Servlet规范确保在destroy方法调用之 前所有请求的处理均完成，需要覆盖destroy方法的情况：释放任何在init方法中 打开的与servlet相关的资源存储servlet的状态</p>
 <h1 id="加载驱动的方法"><a href="#加载驱动的方法" class="headerlink" title="加载驱动的方法"></a>加载驱动的方法</h1><p>1.Class.forName(“com.microsoft.sqlserver.jdbc.SQLServerDriver”);</p>
 <ol start="2">
-<li>DriverManager.registerDriver(new com.mysql.jdbc.Driver());<br>3.System.setProperty(“jdbc.drivers”, “com.mysql.jdbc.Driver”);<h1 id="JVM内存配置参数"><a href="#JVM内存配置参数" class="headerlink" title="JVM内存配置参数"></a>JVM内存配置参数</h1>-Xmx：最大堆大小<br>-Xms：初始堆大小<br>-Xmn:年轻代大小<br>-XXSurvivorRatio：年轻代中Eden区与Survivor区的大小比值<h1 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h1>前序：根左右<br>中序：左根右<br>后序：左右根<h1 id="B-、B-树"><a href="#B-、B-树" class="headerlink" title="B+、B-树"></a>B+、B-树</h1>二叉搜索树：<br>1.所有非叶子结点至多拥有两个儿子（Left和Right）；<br>2.所有结点存储一个关键字；<br>3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；<br><img src="images/1.jpg" alt="二叉搜索树"><br>二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入<br>右儿子；如果左儿子或右儿子的指针为空，则报告找不到相应的关键字。<br>B-树：<br>是一种多路搜索树（并不是二叉的）：<br>1.定义任意非叶子结点最多只有M个儿子；且M&gt;2；<br>2.根结点的儿子数为[2, M]；<br>3.除根结点以外的非叶子结点的儿子数为[M/2, M]；<br>4.每个结点存放至少M/2-1（取上整）和至多M-1个关键字；（至少2个关键字）<br>5.非叶子结点的关键字个数=指向儿子的指针个数-1；<br>6.非叶子结点的关键字：K[1], K[2], …, K[M-1]；且K[i] &lt; K[i+1]；<br>7.非叶子结点的指针：P[1], P[2], …, P[M]；其中P[1]指向关键字小于K[1]的子树，P[M]指向关键字大于K[M-1]的子树，其它P[i]指向关键字属于(K[i-1], K[i])的子树；<br>8.所有叶子结点位于同一层；<br>B-树的搜索，从根结点开始，对结点内的关键字（有序）序列进行二分查找，如果命中则结束，否则进入查询关键字所属范围的儿子结点；重复，直到所对应的儿子指针为空，或已经是叶子结点；<br>B+树：<br>B+树是B-树的变体，也是一种多路搜索树：<br>1.其定义基本与B-树同，除了：<br>2.非叶子结点的子树指针与关键字个数相同；<br>3.非叶子结点的子树指针P[i]，指向关键字值属于[K[i], K[i+1])的子树（B-树是开区间）；<br>5.为所有叶子结点增加一个链指针；<br>6.所有关键字都在叶子结点出现；<br>B+的搜索与B-树也基本相同，区别是B+树只有达到叶子结点才命中（B-树可以在非叶子结点命中），其性能也等价于在关键字全集做一次二分查找。<h1 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h1>哈夫曼树，又称最优树，是一类带权路径长度最短的树。<br>从树中一个结点到另一个结点之间的分支构成两个结点的路径，路径上的分支数目叫做路径长度。<br>树的路径长度是从树根到每一个结点的路径长度之和。<br>结点的带权路径长度为从该结点到树根之间的路径长度与结点上权的乘积。<br>树的带权路径长度为树中所有叶子结点的带权路径长度之和，通常记作WPL。<br>创建哈夫曼树：<br>假设有n个结点，n个结点的权值分别为w1,w2,…,wn，构成的二叉树的集合为F={T1,T2,…,Tn}，则可构造一棵含有n个叶子结点的哈夫曼树。步骤如下：<br>（1）从F中选取两棵根结点权值最小的树作为左右子树构造一棵新的二叉树，其新的二叉树的权值为其左右子树根结点权值之和；<br>（2）从F中删除上一步选取的两棵二叉树，将新构造的树放到F中；<br>（3）重复（1）（2），直到F只含一棵树为止。</li>
+<li>DriverManager.registerDriver(new com.mysql.jdbc.Driver());<br>3.System.setProperty(“jdbc.drivers”, “com.mysql.jdbc.Driver”);<h1 id="JVM内存配置参数"><a href="#JVM内存配置参数" class="headerlink" title="JVM内存配置参数"></a>JVM内存配置参数</h1>-Xmx：最大堆大小<br>-Xms：初始堆大小<br>-Xmn:年轻代大小<br>-XXSurvivorRatio：年轻代中Eden区与Survivor区的大小比值<h1 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h1>前序：根左右<br>中序：左根右<br>后序：左右根<h1 id="B-、B-树"><a href="#B-、B-树" class="headerlink" title="B+、B-树"></a>B+、B-树</h1>二叉搜索树：<br>1.所有非叶子结点至多拥有两个儿子（Left和Right）；<br>2.所有结点存储一个关键字；<br>3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；<br><img src="/myimages/1.jpg" alt="二叉搜索树"><br>二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入<br>右儿子；如果左儿子或右儿子的指针为空，则报告找不到相应的关键字。<br>B-树：<br>是一种多路搜索树（并不是二叉的）：<br>1.定义任意非叶子结点最多只有M个儿子；且M&gt;2；<br>2.根结点的儿子数为[2, M]；<br>3.除根结点以外的非叶子结点的儿子数为[M/2, M]；<br>4.每个结点存放至少M/2-1（取上整）和至多M-1个关键字；（至少2个关键字）<br>5.非叶子结点的关键字个数=指向儿子的指针个数-1；<br>6.非叶子结点的关键字：K[1], K[2], …, K[M-1]；且K[i] &lt; K[i+1]；<br>7.非叶子结点的指针：P[1], P[2], …, P[M]；其中P[1]指向关键字小于K[1]的子树，P[M]指向关键字大于K[M-1]的子树，其它P[i]指向关键字属于(K[i-1], K[i])的子树；<br>8.所有叶子结点位于同一层；<br><img src="/myimages/2.jpg" alt="图片"><br>B-树的搜索，从根结点开始，对结点内的关键字（有序）序列进行二分查找，如果命中则结束，否则进入查询关键字所属范围的儿子结点；重复，直到所对应的儿子指针为空，或已经是叶子结点；<br>B+树：<br>B+树是B-树的变体，也是一种多路搜索树：<br>1.其定义基本与B-树同，除了：<br>2.非叶子结点的子树指针与关键字个数相同；<br>3.非叶子结点的子树指针P[i]，指向关键字值属于[K[i], K[i+1])的子树（B-树是开区间）；<br>5.为所有叶子结点增加一个链指针；<br>6.所有关键字都在叶子结点出现；<br><img src="/myimages/3.jpg" alt="图片"><br>B+的搜索与B-树也基本相同，区别是B+树只有达到叶子结点才命中（B-树可以在非叶子结点命中），其性能也等价于在关键字全集做一次二分查找。<h1 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h1>哈夫曼树，又称最优树，是一类带权路径长度最短的树。<br>从树中一个结点到另一个结点之间的分支构成两个结点的路径，路径上的分支数目叫做路径长度。<br>树的路径长度是从树根到每一个结点的路径长度之和。<br>结点的带权路径长度为从该结点到树根之间的路径长度与结点上权的乘积。<br>树的带权路径长度为树中所有叶子结点的带权路径长度之和，通常记作WPL。<br>创建哈夫曼树：<br>假设有n个结点，n个结点的权值分别为w1,w2,…,wn，构成的二叉树的集合为F={T1,T2,…,Tn}，则可构造一棵含有n个叶子结点的哈夫曼树。步骤如下：<br>（1）从F中选取两棵根结点权值最小的树作为左右子树构造一棵新的二叉树，其新的二叉树的权值为其左右子树根结点权值之和；<br>（2）从F中删除上一步选取的两棵二叉树，将新构造的树放到F中；<br>（3）重复（1）（2），直到F只含一棵树为止。<br><img src="/myimages/4.jpg" alt="图片"><h1 id="冒泡、插入、选择、希尔排序"><a href="#冒泡、插入、选择、希尔排序" class="headerlink" title="冒泡、插入、选择、希尔排序"></a>冒泡、插入、选择、希尔排序</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2>基本的逻辑是，取第一个元素与后一个比较，如果大于后者，就与后者互换位置，不大于，就保持位置不变。再拿第二个元素与后者比较，如果大于后者，就与后者互换位置。一轮比较之后，最大的元素就移动到末尾。相当于最大的就冒出来了。再进行第二轮，第三轮，直到排序完毕。<br>平均情况时间复杂度为O(n^2)。<br><img src="/myimages/5.jpg" alt="图片"><br>public int[] bubbleSort(int[] a) {<pre><code>int n = a.length;
+if (n &lt;= 1) {
+    return a;
+}
+for (int i = 1; i &lt; n; i++) {
+</code></pre>boolean flag = false; // 开关，当某次内层循环，没有数据交换时，已排好顺序，直接跳出循环。<pre><code>    for (int j = 0; j &lt; n - i; j++) {
+        if (a[j] &gt; a[j + 1]) {
+            int temp = a[j];
+            a[j] = a[j + 1];
+            a[j + 1] = temp;
+            flag = true;
+        }
+    }
+    if (!flag) {
+        break;
+    }
+}
+return a;
+</code></pre> }<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2>基本逻辑是，把元素分为已排序的和未排序的。每次从未排序的元素取出第一个，与已排序的元素从尾到头逐一比较，找到插入点，将之后的元素都往后移一位，腾出位置给该元素。<br>平均情况时间复杂度是O(n^2)。<br><img src="/myimages/6.jpg" alt="图片"><br>public int[] insertSort(int[] a) {<pre><code>int n = a.length;
+if (n &lt;= 1) {
+    return a;
+}
+for (int i = 1; i &lt; n; i++) {
+    int temp = a[i];
+    int j = i - 1;
+    for (; j &gt;= 0; j--) {
+        if (a[j] &gt; temp) {
+            a[j + 1] = a[j]; // 比temp 大的已排序数据后移一位
+        } else {
+            break;
+        }
+    }
+    a[j + 1] = temp; // 空出来的位置，把temp放进去
+}
+return a;
+</code></pre> }<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2>基本逻辑是：把所有数据分为已排序区间和未排序区间。每次从未排序区间中，选出最小值，之后将该值与未排序区间第一个元素互换位置，此时已排序区间元素个数多了一个，未排序区间内的元素少了一个。如此循环直到未排序区间没有元素为止。<br>平均情况时间复杂度是O(n^2)。<br><img src="/myimages/7.jpg" alt="图片"><br>public int[] selectionSort(int[] a) {<pre><code>int n = a.length;
+if (n &lt;= 1) {
+    return a;
+}
+for (int i =1; i &lt; n; i++) {
+    int j = i-1;
+    int min = a[j]; // 最小的数值
+    int index = j; // 最小值对应的下标
+    for (; j &lt; n-1 ; j++) {
+        if (min &gt; a[j+1]) {
+            min = a[j+1];
+            index = j+1;
+        }
+    }
+    //最小值a[index]与放未排序的首位a[i-1]互换位置
+    if (index != i-1) {
+        int temp = a[i-1];
+        a[i-1] = a [index];
+        a [index] = temp;
+    }
+}
+return a;
+</code></pre> }<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。<br>时间复杂度是O(n^2)。</li>
 </ol>
-<h1 id="冒泡、插入、选择、希尔排序"><a href="#冒泡、插入、选择、希尔排序" class="headerlink" title="冒泡、插入、选择、希尔排序"></a>冒泡、插入、选择、希尔排序</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>基本的逻辑是，取第一个元素与后一个比较，如果大于后者，就与后者互换位置，不大于，就保持位置不变。再拿第二个元素与后者比较，如果大于后者，就与后者互换位置。一轮比较之后，最大的元素就移动到末尾。相当于最大的就冒出来了。再进行第二轮，第三轮，直到排序完毕。<br>平均情况时间复杂度为O(n^2)。</p>
-<p>public int[] bubbleSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i = 1; i &lt; n; i++) {<br>boolean flag = false; // 开关，当某次内层循环，没有数据交换时，已排好顺序，直接跳出循环。<br>            for (int j = 0; j &lt; n - i; j++) {<br>                if (a[j] &gt; a[j + 1]) {<br>                    int temp = a[j];<br>                    a[j] = a[j + 1];<br>                    a[j + 1] = temp;<br>                    flag = true;<br>                }<br>            }<br>            if (!flag) {<br>                break;<br>            }<br>        }<br>        return a;<br>    }</p>
-<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>基本逻辑是，把元素分为已排序的和未排序的。每次从未排序的元素取出第一个，与已排序的元素从尾到头逐一比较，找到插入点，将之后的元素都往后移一位，腾出位置给该元素。<br>平均情况时间复杂度是O(n^2)。</p>
-<p>public int[] insertSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i = 1; i &lt; n; i++) {<br>            int temp = a[i];<br>            int j = i - 1;<br>            for (; j &gt;= 0; j–) {<br>                if (a[j] &gt; temp) {<br>                    a[j + 1] = a[j]; // 比temp 大的已排序数据后移一位<br>                } else {<br>                    break;<br>                }<br>            }<br>            a[j + 1] = temp; // 空出来的位置，把temp放进去<br>        }<br>        return a;<br>    }</p>
-<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>基本逻辑是：把所有数据分为已排序区间和未排序区间。每次从未排序区间中，选出最小值，之后将该值与未排序区间第一个元素互换位置，此时已排序区间元素个数多了一个，未排序区间内的元素少了一个。如此循环直到未排序区间没有元素为止。<br>平均情况时间复杂度是O(n^2)。</p>
-<p>public int[] selectionSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i =1; i &lt; n; i++) {<br>            int j = i-1;<br>            int min = a[j]; // 最小的数值<br>            int index = j; // 最小值对应的下标<br>            for (; j &lt; n-1 ; j++) {<br>                if (min &gt; a[j+1]) {<br>                    min = a[j+1];<br>                    index = j+1;<br>                }<br>            }<br>            //最小值a[index]与放未排序的首位a[i-1]互换位置<br>            if (index != i-1) {<br>                int temp = a[i-1];<br>                a[i-1] = a [index];<br>                a [index] = temp;<br>            }<br>        }<br>        return a;<br>    }</p>
-<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。<br>时间复杂度是O(n^2)。</p>
 <p>/*<em>希尔排序的原理:根据需求，如果你想要结果从大到小排列，它会首先将数组进行分组，然后将较大值移到前面，较小值移到后面，最后将整个数组进行插入排序，这样比起一开始就用插入排序减少了数据交换和移动的次数，可以说希尔排序是加强版的插入排序<br>拿数组5, 2, 8, 9, 1, 3，4来说，数组长度为7，当increment为3时，数组分为两个序列5，2，8和9，1，3，4，第一次排序，9和5比较，1和2比较，3和8比较，4和比其下标值小increment的数组值相比较<br>此例子是按照从大到小排列，所以大的会排在前面，第一次排序后数组为9, 2, 8, 5, 1, 3，4<br>第一次后increment的值变为3/2=1,此时对数组进行插入排序，实现数组从大到小排
  </em>/</p>
 <pre><code>public static void shellSort(int[] data) 
@@ -471,8 +638,7 @@
 
     }
 }
-</code></pre><h1 id="归并、快速、堆排序"><a href="#归并、快速、堆排序" class="headerlink" title="归并、快速、堆排序"></a>归并、快速、堆排序</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>如果要排序一个数组，我们先把数组从中间分成前后两个部分，然后对前后两个部分分别排序，再将两个部分合并在一直，这个整个数组就是一个有序的数组了。<br>平均情况时间复杂度是O(nlogn)。</p>
-<p>   public static int[] sort(int[] nums, int low, int high) {<br>        int mid = (low + high) / 2;<br>        if (low &lt; high) {<br>            // 左边<br>            sort(nums, low, mid);<br>            // 右边<br>            sort(nums, mid + 1, high);<br>            // 左右归并<br>            merge(nums, low, mid, high);<br>        }<br>        return nums;<br>    }</p>
+</code></pre><h1 id="归并、快速、堆排序"><a href="#归并、快速、堆排序" class="headerlink" title="归并、快速、堆排序"></a>归并、快速、堆排序</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>如果要排序一个数组，我们先把数组从中间分成前后两个部分，然后对前后两个部分分别排序，再将两个部分合并在一直，这个整个数组就是一个有序的数组了。<br>平均情况时间复杂度是O(nlogn)。<br> <img src="/myimages/8.jpg" alt="图片"><br>   public static int[] sort(int[] nums, int low, int high) {<br>        int mid = (low + high) / 2;<br>        if (low &lt; high) {<br>            // 左边<br>            sort(nums, low, mid);<br>            // 右边<br>            sort(nums, mid + 1, high);<br>            // 左右归并<br>            merge(nums, low, mid, high);<br>        }<br>        return nums;<br>    }</p>
 <pre><code>/**
  * 将数组中low到high位置的数进行排序
  * @param nums 待排序数组
@@ -507,12 +673,11 @@ public static void merge(int[] nums, int low, int mid, int high) {
         nums[k2 + low] = temp[k2];
     }
 }
-</code></pre><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序（Quicksort）算法也是利用分治思想，有点像归并排序，但思路不一样。待会我们再讲两者的区别。它的思想是这样的：如果要排序的数组中下标从p到r 之间的一组数据，我们选择 p 到 r 之间的任意一个数据作为pivot(分区点)。<br>我们遍历 p 到 r 之间的数据，将小于 pivot 的放在左边，将大于 pivot 的放到右边，将pivot放到中间。经过这一步骤，数组 p 到 r 之间数据被分成了三个部分，前面 p 到 q-1 之间的都是小于pivot的，中间是pivot,后面的 q+1到 r 之间的是大于pivot的。</p>
-<p>我们用递归排序下标从p 到 q-1 之间的数据和下标从q+1到 r 之间的数据，直到分区缩小为1，这时所有的数据就都有序了。<br>平均情况时间复杂度是O(nlogn)。</p>
-<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆是一种特殊的树形数据结构，其每个节点都有一个值，通常提到的堆都是指一颗完全二叉树，根结点的值小于（或大于）两个子节点的值，同时，根节点的两个子树也分别是一个堆。</p>
-<p>堆排序就是利用堆（假设利用大顶堆）进行排序的方法。它的基本思想是，将待排序的序列构造成一个大顶堆。此时，整个序列的最大值就是堆顶的根节点。将它移走（其实就是将其与堆数组的末尾元素交换，此时末尾元素就是最大值），然后将剩余的 n-1 个序列重新构造成一个堆，这样就会得到 n 个元素中次大的值。如此反复执行，便能得到一个有序序列了。</p>
-<h1 id="三次握手四次分手"><a href="#三次握手四次分手" class="headerlink" title="三次握手四次分手"></a>三次握手四次分手</h1><h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><p>第一次握手：主机A发送位码为syn＝1,随机产生seq number=x的数据包到服务器，客户端进入SYN_SEND状态，等待服务器的确认；主机B由SYN=1知道，A要求建立联机；<br>第二次握手：主机B收到请求后要确认联机信息，向A发送ack number(主机A的seq+1),syn=1,ack=1,随机产生seq=y的包,此时服务器进入SYN_RECV状态;<br>第三次握手：主机A收到后检查ack number是否正确，即第一次发送的seq number+1,以及位码ack是否为1，若正确，主机A会再发送ack number(主机B的seq+1),ack=1，主机B收到后确认seq值与ack=1则连接建立成功。客户端和服务器端都进入ESTABLISHED状态，完成TCP三次握手。</p>
-<h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><p>第一次挥手：主机1（可以使客户端，也可以是服务器端），设置Sequence Number和Acknowledgment Number，向主机2发送一个FIN报文段；此时，主机1进入FIN_WAIT_1状态；这表示主机1没有数据要发送给主机2了；<br>第二次挥手：主机2收到了主机1发送的FIN报文段，向主机1回一个ACK报文段，Acknowledgment Number为Sequence Number加1；主机1进入FIN_WAIT_2状态；主机2告诉主机1，我也没有数据要发送了，可以进行关闭连接了；<br>第三次挥手：主机2向主机1发送FIN报文段，请求关闭连接，同时主机2进入CLOSE_WAIT状态；<br>第四次挥手：主机1收到主机2发送的FIN报文段，向主机2发送ACK报文段，然后主机1进入TIME_WAIT状态；主机2收到主机1的ACK报文段以后，就关闭连接；此时，主机1等待2MSL后依然没有收到回复，则证明Server端已正常关闭，那好，主机1也可以关闭连接了。</p>
+</code></pre><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序（Quicksort）算法也是利用分治思想，有点像归并排序，但思路不一样。待会我们再讲两者的区别。它的思想是这样的：如果要排序的数组中下标从p到r 之间的一组数据，我们选择 p 到 r 之间的任意一个数据作为pivot(分区点)。<br>我们遍历 p 到 r 之间的数据，将小于 pivot 的放在左边，将大于 pivot 的放到右边，将pivot放到中间。经过这一步骤，数组 p 到 r 之间数据被分成了三个部分，前面 p 到 q-1 之间的都是小于pivot的，中间是pivot,后面的 q+1到 r 之间的是大于pivot的。<br> <img src="/myimages/9.jpg" alt="图片"><br>我们用递归排序下标从p 到 q-1 之间的数据和下标从q+1到 r 之间的数据，直到分区缩小为1，这时所有的数据就都有序了。<br>平均情况时间复杂度是O(nlogn)。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆是一种特殊的树形数据结构，其每个节点都有一个值，通常提到的堆都是指一颗完全二叉树，根结点的值小于（或大于）两个子节点的值，同时，根节点的两个子树也分别是一个堆。<br> <img src="/myimages/10.png" alt="图片"><br>堆排序就是利用堆（假设利用大顶堆）进行排序的方法。它的基本思想是，将待排序的序列构造成一个大顶堆。此时，整个序列的最大值就是堆顶的根节点。将它移走（其实就是将其与堆数组的末尾元素交换，此时末尾元素就是最大值），然后将剩余的 n-1 个序列重新构造成一个堆，这样就会得到 n 个元素中次大的值。如此反复执行，便能得到一个有序序列了。</p>
+<h1 id="三次握手四次分手"><a href="#三次握手四次分手" class="headerlink" title="三次握手四次分手"></a>三次握手四次分手</h1><p> <img src="/myimages/11.jpg" alt="图片"></p>
+<h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><p>第一次握手：主机A发送位码为syn＝1,随机产生seq number=x的数据包到服务器，客户端进入SYN_SEND状态，等待服务器的确认；主机B由SYN=1知道，A要求建立联机；<br>第二次握手：主机B收到请求后要确认联机信息，向A发送ack number(主机A的seq+1),syn=1,ack=1,随机产生seq=y的包,此时服务器进入SYN_RECV状态;<br>第三次握手：主机A收到后检查ack number是否正确，即第一次发送的seq number+1,以及位码ack是否为1，若正确，主机A会再发送ack number(主机B的seq+1),ack=1，主机B收到后确认seq值与ack=1则连接建立成功。客户端和服务器端都进入ESTABLISHED状态，完成TCP三次握手。<br> <img src="/myimages/12.png" alt="图片"></p>
+<h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><p>第一次挥手：主机1（可以使客户端，也可以是服务器端），设置Sequence Number和Acknowledgment Number，向主机2发送一个FIN报文段；此时，主机1进入FIN_WAIT_1状态；这表示主机1没有数据要发送给主机2了；<br>第二次挥手：主机2收到了主机1发送的FIN报文段，向主机1回一个ACK报文段，Acknowledgment Number为Sequence Number加1；主机1进入FIN_WAIT_2状态；主机2告诉主机1，我也没有数据要发送了，可以进行关闭连接了；<br>第三次挥手：主机2向主机1发送FIN报文段，请求关闭连接，同时主机2进入CLOSE_WAIT状态；<br>第四次挥手：主机1收到主机2发送的FIN报文段，向主机2发送ACK报文段，然后主机1进入TIME_WAIT状态；主机2收到主机1的ACK报文段以后，就关闭连接；此时，主机1等待2MSL后依然没有收到回复，则证明Server端已正常关闭，那好，主机1也可以关闭连接了。<br> <img src="/myimages/13.png" alt="图片"></p>
 <h1 id="线程安全"><a href="#线程安全" class="headerlink" title="线程安全"></a>线程安全</h1><p>线程也是有从产生到死亡的过程，其中包含了“创建”、“就绪”、“运行”、“阻塞”、“死亡”，这5个步骤。<br>   新建状态:<br>    使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 start() 这个线程。<br>    就绪状态:<br>    当线程对象调用了start()方法之后，该线程就进入就绪状态。就绪状态的线程处于就绪队列中，要等待JVM里线程调度器的调度。<br>    运行状态:<br>    如果就绪状态的线程获取 CPU 资源，就可以执行 run()，此时线程便处于运行状态。处于运行状态的线程最为复杂，它可以变为阻塞状态、就   绪状态和死亡状态。<br>    阻塞状态:<br>    如果一个线程执行了sleep（睡眠）、suspend（挂起）等方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或   获得设备资源后可以重新进入就绪状态。可以分为三种：<br>    等待阻塞：运行状态中的线程执行 wait() 方法，使线程进入到等待阻塞状态。<br>    同步阻塞：线程在获取 synchronized 同步锁失败(因为同步锁被其他线程占用)。<br>    其他阻塞：通过调用线程的 sleep() 或 join() 发出了 I/O 请求时，线程就会进入到阻塞状态。当sleep() 状态超时，join() 等待线程终止或超时，或者 I/O 处理完毕，线程重新转入就绪状态。<br>    死亡状态:<br>一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。</p>
 <p>简单记忆线程安全的集合类： 喂！SHE！  喂是指  vector，S是指 stack， H是指    hashtable，E是指：Eenumeration。</p>
 <h1 id="JSP四大作用域"><a href="#JSP四大作用域" class="headerlink" title="JSP四大作用域"></a>JSP四大作用域</h1><p>page (作用范围最小)：存储在pageContext对象中的属性仅可以被当前JSP页面的当前响应过程中调用的各个组件访问，例如，正在响应当前请求的JSP页面和它调用的各个自定义标签类。<br>request：存储在request对象中的属性可以被属于同一个请求的所有Servlet和JSP页面访问（在有转发的情况下可以跨页面获取属性值），例如使用PageContext.forward和PageContext.include方法连接起来的多个Servlet和JSP页面。<br>session：存储在session对象中的属性可以被属于同一个会话（浏览器打开直到关闭称为一次会话，且在此期间会话不失效）的所有Servlet和JSP页面访问。<br>application（作用范围最大）：存储在application对象中的属性可以被同一个WEB应用程序中的所有Servlet和JSP页面访问。（属性作用范围最大）。</p>
@@ -535,7 +700,25 @@ public static void merge(int[] nums, int low, int mid, int high) {
 
     
 
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/垃圾回收机制/" rel="tag"><i class="fa fa-tag"></i> 垃圾回收机制</a>
+          
+            <a href="/tags/进程问题/" rel="tag"><i class="fa fa-tag"></i> 进程问题</a>
+          
+        </div>
       
 
       
@@ -616,7 +799,43 @@ public static void merge(int[] nums, int low, int mid, int high) {
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -625,6 +844,32 @@ public static void merge(int[] nums, int low, int mid, int high) {
 
           
 
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/lhhk" title="GitHub &rarr; https://github.com/lhhk" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://weibo.com/5360445337" title="Weibo &rarr; https://weibo.com/5360445337" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                </span>
+              
+            </div>
           
 
           
@@ -823,6 +1068,326 @@ public static void merge(int[] nums, int low, int mid, int high) {
 
 
   
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -855,5 +1420,5 @@ public static void merge(int[] nums, int low, int mid, int high) {
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>
