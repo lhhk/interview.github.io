@@ -137,7 +137,7 @@
 <meta property="og:image" content="http://yoursite.com/myimages/11.jpg">
 <meta property="og:image" content="http://yoursite.com/myimages/12.png">
 <meta property="og:image" content="http://yoursite.com/myimages/13.png">
-<meta property="og:updated_time" content="2019-05-23T07:01:01.901Z">
+<meta property="og:updated_time" content="2019-05-23T08:25:23.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结">
 <meta name="twitter:description" content="重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&amp;gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不">
@@ -453,7 +453,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-23 15:01:01" itemprop="dateModified" datetime="2019-05-23T15:01:01+08:00">2019-05-23</time>
+                <time title="修改时间：2019-05-23 16:25:23" itemprop="dateModified" datetime="2019-05-23T16:25:23+08:00">2019-05-23</time>
               
             
           </span>
@@ -499,7 +499,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">17k</span>
+                <span title="本文字数">20k</span>
               
 
               
@@ -513,7 +513,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">16 分钟</span>
+                <span title="阅读时长">19 分钟</span>
               
             </div>
           
@@ -691,6 +691,62 @@ public static void merge(int[] nums, int low, int mid, int high) {
 <h1 id="ArrayList和Vector的区别"><a href="#ArrayList和Vector的区别" class="headerlink" title="ArrayList和Vector的区别"></a>ArrayList和Vector的区别</h1><p>共同点：<br>    &emsp;这两个类都实现了List接口，它们都是有序的集合(存储有序)，底层是数组。我们可以按位置索引号取出某个元素，允许元素重复和为null。<br>区别：<br>    &emsp;同步性：<br>        &emsp;&emsp;ArrayList是非同步的<br>        &emsp;&emsp;Vector是同步的<br>        &emsp;&emsp;即便需要同步的时候，我们可以使用Collections工具类来构建出同步的ArrayList而不用Vector<br>    &emsp;扩容大小：<br>        &emsp;&emsp;Vector增长原来的一倍，ArrayList增长原来的0.5倍</p>
 <h1 id="HashMap和Hashtable的区别"><a href="#HashMap和Hashtable的区别" class="headerlink" title="HashMap和Hashtable的区别"></a>HashMap和Hashtable的区别</h1><p>共同点：<br>    &emsp;从存储结构和实现来讲基本上都是相同的，都是实现Map接口~<br>区别：<br>    &emsp;同步性：<br>        &emsp;&emsp;HashMap是非同步的<br>        &emsp;&emsp;Hashtable是同步的<br>        &emsp;&emsp;需要同步的时候，我们往往不使用，而使用ConcurrentHashMap<br>    &emsp;是否允许为null：<br>        &emsp;&emsp;HashMap允许为null<br>        &emsp;&emsp;Hashtable不允许为null<br>    &emsp;继承不同：<br>        &emsp;&emsp;HashMap&lt;K,V&gt; extends AbstractMap&lt;K,V&gt;<br>        &emsp;&emsp;public class Hashtable&lt;K,V&gt; extends Dictionary&lt;K,V&gt;</p>
 <h1 id="List和Map的区别"><a href="#List和Map的区别" class="headerlink" title="List和Map的区别"></a>List和Map的区别</h1><p>共同点：<br>&emsp;都是Java常用的容器，都是接口<br>不同点：<br>&emsp;存储结构不同：<br>&emsp;&emsp;List是存储单列的集合<br>&emsp;&emsp;Map存储的是key-value键值对的集合<br>&emsp;元素是否可重复：<br>&emsp;&emsp;List允许元素重复<br>&emsp;&emsp;Map不允许key重复<br>&emsp;是否有序：<br>&emsp;&emsp;List集合是有序的(存储有序)<br>&emsp;&emsp;Map集合是无序的(存储无序)</p>
+<h1 id="Collection和Collections的区别"><a href="#Collection和Collections的区别" class="headerlink" title="Collection和Collections的区别"></a>Collection和Collections的区别</h1><p>Collection是集合的上级接口，继承它的有Set和List接口<br>Collections是集合的工具类，提供了一系列的静态方法对集合的搜索、查找、同步等操作</p>
+<h1 id="说出ArrayList-LinkedList的存储性能和特性"><a href="#说出ArrayList-LinkedList的存储性能和特性" class="headerlink" title="说出ArrayList,LinkedList的存储性能和特性"></a>说出ArrayList,LinkedList的存储性能和特性</h1><p>ArrayList的底层是数组，LinkedList的底层是双向链表。<br>ArrayList它支持以角标位置进行索引出对应的元素(随机访问)，而LinkedList则需要遍历整个链表来获取对应的元素。因此一般来说ArrayList的访问速度是要比LinkedList要快的<br>ArrayList由于是数组，对于删除和修改而言消耗是比较大(复制和移动数组实现)，LinkedList是双向链表删除和修改只需要修改对应的指针即可，消耗是很小的。因此一般来说LinkedList的增删速度是要比ArrayList要快的</p>
+<h1 id="JDBC操作数据库的步骤"><a href="#JDBC操作数据库的步骤" class="headerlink" title="JDBC操作数据库的步骤"></a>JDBC操作数据库的步骤</h1><p>1.注册数据库驱动。<br>2.建立数据库连接。<br>3.创建一个Statement。<br>4.执行SQL语句。<br>5.处理结果集。<br>6.关闭数据库连接<br>        Connection connection = null;<br>        Statement statement = null;<br>        ResultSet resultSet = null;<br>        try {<br>            /*</p>
+<pre><code>    * 加载驱动有两种方式
+    *
+    * 1：会导致驱动会注册两次，过度依赖于mysql的api，脱离的mysql的开发包，程序则无法编译
+    * 2：驱动只会加载一次，不需要依赖具体的驱动，灵活性高
+    * 我们一般都是使用第二种方式
+    * */
+    //1.
+    //DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+    //2.
+    Class.forName(&quot;com.mysql.jdbc.Driver&quot;);
+    //获取与数据库连接的对象-Connetcion
+    connection = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/text&quot;, &quot;root&quot;, &quot;root&quot;);
+    //获取执行sql语句的statement对象
+    statement = connection.createStatement();
+    //执行sql语句,拿到结果集
+    resultSet = statement.executeQuery(&quot;SELECT * FROM users&quot;);
+    //遍历结果集，得到数据
+    while (resultSet.next()) {
+        System.out.println(resultSet.getString(1));
+        System.out.println(resultSet.getString(2));
+    }       
+} catch (SQLException e) {
+    e.printStackTrace();
+} catch (ClassNotFoundException e) {
+    e.printStackTrace();
+} finally {
+    /*
+    * 关闭资源，后调用的先关闭
+    * 关闭之前，要判断对象是否存在
+    * */
+    if (resultSet != null) {
+        try {
+            resultSet.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    if (statement != null) {
+        try {
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    if (connection != null) {
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre><h1 id="一次完整的HTTP请求所经历的7个步骤"><a href="#一次完整的HTTP请求所经历的7个步骤" class="headerlink" title="一次完整的HTTP请求所经历的7个步骤"></a>一次完整的HTTP请求所经历的7个步骤</h1><p>HTTP通信机制是在一次完整的HTTP通信过程中，Web浏览器与Web服务器之间将完成下列7个步骤：<br>&nbsp;&nbsp;建立TCP连接-&gt;发送请求行-&gt;发送请求头-&gt;（到达服务器）发送状态行-&gt;发送响应头-&gt;发送响应数据-&gt;断TCP连接<br>1.建立TCP连接<br>在HTTP工作开始之前，Web浏览器首先要通过网络与Web服务器建立连接，该连接是通过TCP来完成的，该协议与IP协议共同构建 Internet，即著名的TCP/IP协议族，因此Internet又被称作是TCP/IP网络。HTTP是比TCP更高层次的应用层协议，根据规则， 只有低层协议建立之后才能，才能进行更层协议的连接，因此，首先要建立TCP连接，一般TCP连接的端口号是80。<br>2.Web浏览器向Web服务器发送请求行<br>一旦建立了TCP连接，Web浏览器就会向Web服务器发送请求命令。例如：GET /sample/hello.jsp HTTP/1.1。<br>3.Web浏览器发送请求头<br>浏览器发送其请求命令之后，还要以头信息的形式向Web服务器发送一些别的信息，之后浏览器发送了一空白行来通知服务器，它已经结束了该头信息的发送。<br>4.Web服务器应答<br>客户机向服务器发出请求后，服务器会客户机回送应答， HTTP/1.1 200 OK ，应答的第一部分是协议的版本号和应答状态码。<br>5.Web服务器发送应答头<br>正如客户端会随同请求发送关于自身的信息一样，服务器也会随同应答向用户发送关于它自己的数据及被请求的文档。<br>6.Web服务器向浏览器发送数据<br>Web服务器向浏览器发送头信息后，它会发送一个空白行来表示头信息的发送到此为结束，接着，它就以Content-Type应答头信息所描述的格式发送用户所请求的实际数据。<br>7.Web服务器关闭TCP连接<br>一般情况下，一旦Web服务器向浏览器发送了请求数据，它就要关闭TCP连接，然后如果浏览器或者服务器在其头信息加入了这行代码：<br>Connection:keep-alive<br>TCP连接在发送后将仍然保持打开状态，于是，浏览器可以继续通过相同的连接发送请求。保持连接节省了为每个请求建立新连接所需的时间，还节约了网络带宽。</p>
 
       
     </div>
@@ -906,7 +962,7 @@ public static void merge(int[] nums, int low, int mid, int high) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重载（Overload）和重写（Override）的区别？"><span class="nav-number">1.</span> <span class="nav-text">重载（Overload）和重写（Override）的区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口和抽象类的区别"><span class="nav-number">2.</span> <span class="nav-text">接口和抽象类的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是AQS"><span class="nav-number">3.</span> <span class="nav-text">什么是AQS?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是CAS？"><span class="nav-number">4.</span> <span class="nav-text">什么是CAS？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO-NIO-AIO"><span class="nav-number">5.</span> <span class="nav-text">IO,NIO,AIO</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-内存模型"><span class="nav-number">6.</span> <span class="nav-text">Java 内存模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说说JVM的垃圾回收策略"><span class="nav-number">7.</span> <span class="nav-text">说说JVM的垃圾回收策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象存活检查-可达性分析算法，引用计数法"><span class="nav-number">8.</span> <span class="nav-text">对象存活检查(可达性分析算法，引用计数法)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程同步"><span class="nav-number">9.</span> <span class="nav-text">进程同步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是UML"><span class="nav-number">10.</span> <span class="nav-text">什么是UML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是ACID"><span class="nav-number">11.</span> <span class="nav-text">什么是ACID</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java内存区域划分"><span class="nav-number">12.</span> <span class="nav-text">Java内存区域划分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring事务传播特性"><span class="nav-number">13.</span> <span class="nav-text">Spring事务传播特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Servlet的生命周期"><span class="nav-number">14.</span> <span class="nav-text">Servlet的生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加载驱动的方法"><span class="nav-number">15.</span> <span class="nav-text">加载驱动的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM内存配置参数"><span class="nav-number">16.</span> <span class="nav-text">JVM内存配置参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二叉树遍历"><span class="nav-number">17.</span> <span class="nav-text">二叉树遍历</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-、B-树"><span class="nav-number">18.</span> <span class="nav-text">B+、B-树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哈夫曼树"><span class="nav-number">19.</span> <span class="nav-text">哈夫曼树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡、插入、选择、希尔排序"><span class="nav-number">20.</span> <span class="nav-text">冒泡、插入、选择、希尔排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">20.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">20.2.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">20.3.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">20.4.</span> <span class="nav-text">希尔排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#归并、快速、堆排序"><span class="nav-number">21.</span> <span class="nav-text">归并、快速、堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">21.1.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">21.2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">21.3.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三次握手四次分手"><span class="nav-number">22.</span> <span class="nav-text">三次握手四次分手</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三次握手"><span class="nav-number">22.1.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四次挥手"><span class="nav-number">22.2.</span> <span class="nav-text">四次挥手</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全"><span class="nav-number">23.</span> <span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSP四大作用域"><span class="nav-number">24.</span> <span class="nav-text">JSP四大作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring的AOP理解"><span class="nav-number">25.</span> <span class="nav-text">Spring的AOP理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring的IoC理解"><span class="nav-number">26.</span> <span class="nav-text">Spring的IoC理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BeanFactory和ApplicationContext的区别"><span class="nav-number">27.</span> <span class="nav-text">BeanFactory和ApplicationContext的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解释Spring支持的几种bean的作用域"><span class="nav-number">28.</span> <span class="nav-text">解释Spring支持的几种bean的作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringMVC与Struts2的主要区别"><span class="nav-number">29.</span> <span class="nav-text">SpringMVC与Struts2的主要区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList和Vector的区别"><span class="nav-number">30.</span> <span class="nav-text">ArrayList和Vector的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap和Hashtable的区别"><span class="nav-number">31.</span> <span class="nav-text">HashMap和Hashtable的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List和Map的区别"><span class="nav-number">32.</span> <span class="nav-text">List和Map的区别</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重载（Overload）和重写（Override）的区别？"><span class="nav-number">1.</span> <span class="nav-text">重载（Overload）和重写（Override）的区别？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#接口和抽象类的区别"><span class="nav-number">2.</span> <span class="nav-text">接口和抽象类的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是AQS"><span class="nav-number">3.</span> <span class="nav-text">什么是AQS?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是CAS？"><span class="nav-number">4.</span> <span class="nav-text">什么是CAS？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO-NIO-AIO"><span class="nav-number">5.</span> <span class="nav-text">IO,NIO,AIO</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-内存模型"><span class="nav-number">6.</span> <span class="nav-text">Java 内存模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说说JVM的垃圾回收策略"><span class="nav-number">7.</span> <span class="nav-text">说说JVM的垃圾回收策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对象存活检查-可达性分析算法，引用计数法"><span class="nav-number">8.</span> <span class="nav-text">对象存活检查(可达性分析算法，引用计数法)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程同步"><span class="nav-number">9.</span> <span class="nav-text">进程同步</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是UML"><span class="nav-number">10.</span> <span class="nav-text">什么是UML</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是ACID"><span class="nav-number">11.</span> <span class="nav-text">什么是ACID</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java内存区域划分"><span class="nav-number">12.</span> <span class="nav-text">Java内存区域划分</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring事务传播特性"><span class="nav-number">13.</span> <span class="nav-text">Spring事务传播特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Servlet的生命周期"><span class="nav-number">14.</span> <span class="nav-text">Servlet的生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#加载驱动的方法"><span class="nav-number">15.</span> <span class="nav-text">加载驱动的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM内存配置参数"><span class="nav-number">16.</span> <span class="nav-text">JVM内存配置参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二叉树遍历"><span class="nav-number">17.</span> <span class="nav-text">二叉树遍历</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-、B-树"><span class="nav-number">18.</span> <span class="nav-text">B+、B-树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哈夫曼树"><span class="nav-number">19.</span> <span class="nav-text">哈夫曼树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡、插入、选择、希尔排序"><span class="nav-number">20.</span> <span class="nav-text">冒泡、插入、选择、希尔排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">20.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">20.2.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">20.3.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">20.4.</span> <span class="nav-text">希尔排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#归并、快速、堆排序"><span class="nav-number">21.</span> <span class="nav-text">归并、快速、堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">21.1.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">21.2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">21.3.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三次握手四次分手"><span class="nav-number">22.</span> <span class="nav-text">三次握手四次分手</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三次握手"><span class="nav-number">22.1.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四次挥手"><span class="nav-number">22.2.</span> <span class="nav-text">四次挥手</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线程安全"><span class="nav-number">23.</span> <span class="nav-text">线程安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSP四大作用域"><span class="nav-number">24.</span> <span class="nav-text">JSP四大作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring的AOP理解"><span class="nav-number">25.</span> <span class="nav-text">Spring的AOP理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring的IoC理解"><span class="nav-number">26.</span> <span class="nav-text">Spring的IoC理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BeanFactory和ApplicationContext的区别"><span class="nav-number">27.</span> <span class="nav-text">BeanFactory和ApplicationContext的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解释Spring支持的几种bean的作用域"><span class="nav-number">28.</span> <span class="nav-text">解释Spring支持的几种bean的作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringMVC与Struts2的主要区别"><span class="nav-number">29.</span> <span class="nav-text">SpringMVC与Struts2的主要区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList和Vector的区别"><span class="nav-number">30.</span> <span class="nav-text">ArrayList和Vector的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap和Hashtable的区别"><span class="nav-number">31.</span> <span class="nav-text">HashMap和Hashtable的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List和Map的区别"><span class="nav-number">32.</span> <span class="nav-text">List和Map的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collection和Collections的区别"><span class="nav-number">33.</span> <span class="nav-text">Collection和Collections的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说出ArrayList-LinkedList的存储性能和特性"><span class="nav-number">34.</span> <span class="nav-text">说出ArrayList,LinkedList的存储性能和特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDBC操作数据库的步骤"><span class="nav-number">35.</span> <span class="nav-text">JDBC操作数据库的步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一次完整的HTTP请求所经历的7个步骤"><span class="nav-number">36.</span> <span class="nav-text">一次完整的HTTP请求所经历的7个步骤</span></a></li></ol></div>
             
 
           </div>
