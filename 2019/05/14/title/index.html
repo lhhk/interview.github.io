@@ -137,7 +137,7 @@
 <meta property="og:image" content="http://yoursite.com/myimages/11.jpg">
 <meta property="og:image" content="http://yoursite.com/myimages/12.png">
 <meta property="og:image" content="http://yoursite.com/myimages/13.png">
-<meta property="og:updated_time" content="2019-05-23T08:25:23.295Z">
+<meta property="og:updated_time" content="2019-05-24T02:04:09.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结">
 <meta name="twitter:description" content="重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&amp;gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容返回类型，比父类被重写方法更好访问，不">
@@ -453,7 +453,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-23 16:25:23" itemprop="dateModified" datetime="2019-05-23T16:25:23+08:00">2019-05-23</time>
+                <time title="修改时间：2019-05-24 10:04:09" itemprop="dateModified" datetime="2019-05-24T10:04:09+08:00">2019-05-24</time>
               
             
           </span>
@@ -499,7 +499,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">20k</span>
+                <span title="本文字数">21k</span>
               
 
               
@@ -548,67 +548,15 @@
 <h1 id="Spring事务传播特性"><a href="#Spring事务传播特性" class="headerlink" title="Spring事务传播特性"></a>Spring事务传播特性</h1><p>PROPAGATION_REQUIRED–支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。<br>PROPAGATION_SUPPORTS–支持当前事务，如果当前没有事务，就以非事务方式执行。<br>PROPAGATION_MANDATORY–支持当前事务，如果当前没有事务，就抛出异常。<br>PROPAGATION_REQUIRES_NEW–新建事务，如果当前存在事务，把当前事务挂起。<br>PROPAGATION_NOT_SUPPORTED–以非事务方式执行操作，如果当前存在事务，就把当前事务挂起。<br>PROPAGATION_NEVER–以非事务方式执行，如果当前存在事务，则抛出异常。</p>
 <h1 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h1><p>Servlet的生命周期分为5个阶段：加载、创建、初始化、处理客户请求、卸载。<br>(1)加载：容器通过类加载器使用servlet类对应的文件加载servlet<br>(2)创建：通过调用servlet构造函数创建一个servlet对象<br>(3)初始化：调用init方法初始化<br>(4)处理客户请求：每当有一个客户请求，容器会创建一个线程来处理客户请求<br>(5)卸载：调用destroy方法让servlet自己释放其占用的资源</p>
 <p>init方法： 是在servlet实例创建时调用的方法，用于创建或打开任何与servlet相的资源和初始 化servlet的状态，Servlet规范保证调用init方法前不会处理任何请求<br> service方法：是servlet真正处理客户端传过来的请求的方法，由web容器调用， 根据HTTP请求方法（GET、POST等），将请求分发到doGet、doPost等方法<br>destory方法：是在servlet实例被销毁时由web容器调用。Servlet规范确保在destroy方法调用之 前所有请求的处理均完成，需要覆盖destroy方法的情况：释放任何在init方法中 打开的与servlet相关的资源存储servlet的状态</p>
-<h1 id="加载驱动的方法"><a href="#加载驱动的方法" class="headerlink" title="加载驱动的方法"></a>加载驱动的方法</h1><p>1.Class.forName(“com.microsoft.sqlserver.jdbc.SQLServerDriver”);</p>
-<ol start="2">
-<li>DriverManager.registerDriver(new com.mysql.jdbc.Driver());<br>3.System.setProperty(“jdbc.drivers”, “com.mysql.jdbc.Driver”);<h1 id="JVM内存配置参数"><a href="#JVM内存配置参数" class="headerlink" title="JVM内存配置参数"></a>JVM内存配置参数</h1>-Xmx：最大堆大小<br>-Xms：初始堆大小<br>-Xmn:年轻代大小<br>-XXSurvivorRatio：年轻代中Eden区与Survivor区的大小比值<h1 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h1>前序：根左右<br>中序：左根右<br>后序：左右根<h1 id="B-、B-树"><a href="#B-、B-树" class="headerlink" title="B+、B-树"></a>B+、B-树</h1>二叉搜索树：<br>1.所有非叶子结点至多拥有两个儿子（Left和Right）；<br>2.所有结点存储一个关键字；<br>3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；<br><img src="/myimages/1.jpg" alt="二叉搜索树"><br>二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入<br>右儿子；如果左儿子或右儿子的指针为空，则报告找不到相应的关键字。<br>B-树：<br>是一种多路搜索树（并不是二叉的）：<br>1.定义任意非叶子结点最多只有M个儿子；且M&gt;2；<br>2.根结点的儿子数为[2, M]；<br>3.除根结点以外的非叶子结点的儿子数为[M/2, M]；<br>4.每个结点存放至少M/2-1（取上整）和至多M-1个关键字；（至少2个关键字）<br>5.非叶子结点的关键字个数=指向儿子的指针个数-1；<br>6.非叶子结点的关键字：K[1], K[2], …, K[M-1]；且K[i] &lt; K[i+1]；<br>7.非叶子结点的指针：P[1], P[2], …, P[M]；其中P[1]指向关键字小于K[1]的子树，P[M]指向关键字大于K[M-1]的子树，其它P[i]指向关键字属于(K[i-1], K[i])的子树；<br>8.所有叶子结点位于同一层；<br><img src="/myimages/2.jpg" alt="图片"><br>B-树的搜索，从根结点开始，对结点内的关键字（有序）序列进行二分查找，如果命中则结束，否则进入查询关键字所属范围的儿子结点；重复，直到所对应的儿子指针为空，或已经是叶子结点；<br>B+树：<br>B+树是B-树的变体，也是一种多路搜索树：<br>1.其定义基本与B-树同，除了：<br>2.非叶子结点的子树指针与关键字个数相同；<br>3.非叶子结点的子树指针P[i]，指向关键字值属于[K[i], K[i+1])的子树（B-树是开区间）；<br>5.为所有叶子结点增加一个链指针；<br>6.所有关键字都在叶子结点出现；<br><img src="/myimages/3.jpg" alt="图片"><br>B+的搜索与B-树也基本相同，区别是B+树只有达到叶子结点才命中（B-树可以在非叶子结点命中），其性能也等价于在关键字全集做一次二分查找。<h1 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h1>哈夫曼树，又称最优树，是一类带权路径长度最短的树。<br>从树中一个结点到另一个结点之间的分支构成两个结点的路径，路径上的分支数目叫做路径长度。<br>树的路径长度是从树根到每一个结点的路径长度之和。<br>结点的带权路径长度为从该结点到树根之间的路径长度与结点上权的乘积。<br>树的带权路径长度为树中所有叶子结点的带权路径长度之和，通常记作WPL。<br>创建哈夫曼树：<br>假设有n个结点，n个结点的权值分别为w1,w2,…,wn，构成的二叉树的集合为F={T1,T2,…,Tn}，则可构造一棵含有n个叶子结点的哈夫曼树。步骤如下：<br>（1）从F中选取两棵根结点权值最小的树作为左右子树构造一棵新的二叉树，其新的二叉树的权值为其左右子树根结点权值之和；<br>（2）从F中删除上一步选取的两棵二叉树，将新构造的树放到F中；<br>（3）重复（1）（2），直到F只含一棵树为止。<br><img src="/myimages/4.jpg" alt="图片"><h1 id="冒泡、插入、选择、希尔排序"><a href="#冒泡、插入、选择、希尔排序" class="headerlink" title="冒泡、插入、选择、希尔排序"></a>冒泡、插入、选择、希尔排序</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2>基本的逻辑是，取第一个元素与后一个比较，如果大于后者，就与后者互换位置，不大于，就保持位置不变。再拿第二个元素与后者比较，如果大于后者，就与后者互换位置。一轮比较之后，最大的元素就移动到末尾。相当于最大的就冒出来了。再进行第二轮，第三轮，直到排序完毕。<br>平均情况时间复杂度为O(n^2)。<br><img src="/myimages/5.jpg" alt="图片"><br>public int[] bubbleSort(int[] a) {<pre><code>int n = a.length;
-if (n &lt;= 1) {
-    return a;
-}
-for (int i = 1; i &lt; n; i++) {
-</code></pre>boolean flag = false; // 开关，当某次内层循环，没有数据交换时，已排好顺序，直接跳出循环。<pre><code>    for (int j = 0; j &lt; n - i; j++) {
-        if (a[j] &gt; a[j + 1]) {
-            int temp = a[j];
-            a[j] = a[j + 1];
-            a[j + 1] = temp;
-            flag = true;
-        }
-    }
-    if (!flag) {
-        break;
-    }
-}
-return a;
-</code></pre> }<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2>基本逻辑是，把元素分为已排序的和未排序的。每次从未排序的元素取出第一个，与已排序的元素从尾到头逐一比较，找到插入点，将之后的元素都往后移一位，腾出位置给该元素。<br>平均情况时间复杂度是O(n^2)。<br><img src="/myimages/6.jpg" alt="图片"><br>public int[] insertSort(int[] a) {<pre><code>int n = a.length;
-if (n &lt;= 1) {
-    return a;
-}
-for (int i = 1; i &lt; n; i++) {
-    int temp = a[i];
-    int j = i - 1;
-    for (; j &gt;= 0; j--) {
-        if (a[j] &gt; temp) {
-            a[j + 1] = a[j]; // 比temp 大的已排序数据后移一位
-        } else {
-            break;
-        }
-    }
-    a[j + 1] = temp; // 空出来的位置，把temp放进去
-}
-return a;
-</code></pre> }<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2>基本逻辑是：把所有数据分为已排序区间和未排序区间。每次从未排序区间中，选出最小值，之后将该值与未排序区间第一个元素互换位置，此时已排序区间元素个数多了一个，未排序区间内的元素少了一个。如此循环直到未排序区间没有元素为止。<br>平均情况时间复杂度是O(n^2)。<br><img src="/myimages/7.jpg" alt="图片"><br>public int[] selectionSort(int[] a) {<pre><code>int n = a.length;
-if (n &lt;= 1) {
-    return a;
-}
-for (int i =1; i &lt; n; i++) {
-    int j = i-1;
-    int min = a[j]; // 最小的数值
-    int index = j; // 最小值对应的下标
-    for (; j &lt; n-1 ; j++) {
-        if (min &gt; a[j+1]) {
-            min = a[j+1];
-            index = j+1;
-        }
-    }
-    //最小值a[index]与放未排序的首位a[i-1]互换位置
-    if (index != i-1) {
-        int temp = a[i-1];
-        a[i-1] = a [index];
-        a [index] = temp;
-    }
-}
-return a;
-</code></pre> }<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。<br>时间复杂度是O(n^2)。</li>
-</ol>
+<h1 id="加载驱动的方法"><a href="#加载驱动的方法" class="headerlink" title="加载驱动的方法"></a>加载驱动的方法</h1><p>1.Class.forName(“com.microsoft.sqlserver.jdbc.SQLServerDriver”);<br>2.DriverManager.registerDriver(new com.mysql.jdbc.Driver());<br>3.System.setProperty(“jdbc.drivers”, “com.mysql.jdbc.Driver”);</p>
+<h1 id="JVM内存配置参数"><a href="#JVM内存配置参数" class="headerlink" title="JVM内存配置参数"></a>JVM内存配置参数</h1><p>-Xmx：最大堆大小<br>-Xms：初始堆大小<br>-Xmn:年轻代大小<br>-XXSurvivorRatio：年轻代中Eden区与Survivor区的大小比值</p>
+<h1 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h1><p>前序：根左右<br>中序：左根右<br>后序：左右根</p>
+<h1 id="B-、B-树"><a href="#B-、B-树" class="headerlink" title="B+、B-树"></a>B+、B-树</h1><p>二叉搜索树：<br>1.所有非叶子结点至多拥有两个儿子（Left和Right）；<br>2.所有结点存储一个关键字；<br>3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；<br><img src="/myimages/1.jpg" alt="二叉搜索树"><br>二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入<br>右儿子；如果左儿子或右儿子的指针为空，则报告找不到相应的关键字。<br>B-树：<br>是一种多路搜索树（并不是二叉的）：<br>1.定义任意非叶子结点最多只有M个儿子；且M&gt;2；<br>2.根结点的儿子数为[2, M]；<br>3.除根结点以外的非叶子结点的儿子数为[M/2, M]；<br>4.每个结点存放至少M/2-1（取上整）和至多M-1个关键字；（至少2个关键字）<br>5.非叶子结点的关键字个数=指向儿子的指针个数-1；<br>6.非叶子结点的关键字：K[1], K[2], …, K[M-1]；且K[i] &lt; K[i+1]；<br>7.非叶子结点的指针：P[1], P[2], …, P[M]；其中P[1]指向关键字小于K[1]的子树，P[M]指向关键字大于K[M-1]的子树，其它P[i]指向关键字属于(K[i-1], K[i])的子树；<br>8.所有叶子结点位于同一层；<br><img src="/myimages/2.jpg" alt="图片"><br>B-树的搜索，从根结点开始，对结点内的关键字（有序）序列进行二分查找，如果命中则结束，否则进入查询关键字所属范围的儿子结点；重复，直到所对应的儿子指针为空，或已经是叶子结点；<br>B+树：<br>B+树是B-树的变体，也是一种多路搜索树：<br>1.其定义基本与B-树同，除了：<br>2.非叶子结点的子树指针与关键字个数相同；<br>3.非叶子结点的子树指针P[i]，指向关键字值属于[K[i], K[i+1])的子树（B-树是开区间）；<br>5.为所有叶子结点增加一个链指针；<br>6.所有关键字都在叶子结点出现；<br><img src="/myimages/3.jpg" alt="图片"><br>B+的搜索与B-树也基本相同，区别是B+树只有达到叶子结点才命中（B-树可以在非叶子结点命中），其性能也等价于在关键字全集做一次二分查找。</p>
+<h1 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h1><p>哈夫曼树，又称最优树，是一类带权路径长度最短的树。<br>从树中一个结点到另一个结点之间的分支构成两个结点的路径，路径上的分支数目叫做路径长度。<br>树的路径长度是从树根到每一个结点的路径长度之和。<br>结点的带权路径长度为从该结点到树根之间的路径长度与结点上权的乘积。<br>树的带权路径长度为树中所有叶子结点的带权路径长度之和，通常记作WPL。<br>创建哈夫曼树：<br>假设有n个结点，n个结点的权值分别为w1,w2,…,wn，构成的二叉树的集合为F={T1,T2,…,Tn}，则可构造一棵含有n个叶子结点的哈夫曼树。步骤如下：<br>（1）从F中选取两棵根结点权值最小的树作为左右子树构造一棵新的二叉树，其新的二叉树的权值为其左右子树根结点权值之和；<br>（2）从F中删除上一步选取的两棵二叉树，将新构造的树放到F中；<br>（3）重复（1）（2），直到F只含一棵树为止。<br> <img src="/myimages/4.jpg" alt="图片"></p>
+<h1 id="冒泡、插入、选择、希尔排序"><a href="#冒泡、插入、选择、希尔排序" class="headerlink" title="冒泡、插入、选择、希尔排序"></a>冒泡、插入、选择、希尔排序</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>基本的逻辑是，取第一个元素与后一个比较，如果大于后者，就与后者互换位置，不大于，就保持位置不变。再拿第二个元素与后者比较，如果大于后者，就与后者互换位置。一轮比较之后，最大的元素就移动到末尾。相当于最大的就冒出来了。再进行第二轮，第三轮，直到排序完毕。<br>平均情况时间复杂度为O(n^2)。<br> <img src="/myimages/5.jpg" alt="图片"><br>public int[] bubbleSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i = 1; i &lt; n; i++) {<br>boolean flag = false; // 开关，当某次内层循环，没有数据交换时，已排好顺序，直接跳出循环。<br>            for (int j = 0; j &lt; n - i; j++) {<br>                if (a[j] &gt; a[j + 1]) {<br>                    int temp = a[j];<br>                    a[j] = a[j + 1];<br>                    a[j + 1] = temp;<br>                    flag = true;<br>                }<br>            }<br>            if (!flag) {<br>                break;<br>            }<br>        }<br>        return a;<br>    }</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>基本逻辑是，把元素分为已排序的和未排序的。每次从未排序的元素取出第一个，与已排序的元素从尾到头逐一比较，找到插入点，将之后的元素都往后移一位，腾出位置给该元素。<br>平均情况时间复杂度是O(n^2)。<br> <img src="/myimages/6.jpg" alt="图片"><br>public int[] insertSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i = 1; i &lt; n; i++) {<br>            int temp = a[i];<br>            int j = i - 1;<br>            for (; j &gt;= 0; j–) {<br>                if (a[j] &gt; temp) {<br>                    a[j + 1] = a[j]; // 比temp 大的已排序数据后移一位<br>                } else {<br>                    break;<br>                }<br>            }<br>            a[j + 1] = temp; // 空出来的位置，把temp放进去<br>        }<br>        return a;<br>    }</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>基本逻辑是：把所有数据分为已排序区间和未排序区间。每次从未排序区间中，选出最小值，之后将该值与未排序区间第一个元素互换位置，此时已排序区间元素个数多了一个，未排序区间内的元素少了一个。如此循环直到未排序区间没有元素为止。<br>平均情况时间复杂度是O(n^2)。<br> <img src="/myimages/7.jpg" alt="图片"><br>public int[] selectionSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i =1; i &lt; n; i++) {<br>            int j = i-1;<br>            int min = a[j]; // 最小的数值<br>            int index = j; // 最小值对应的下标<br>            for (; j &lt; n-1 ; j++) {<br>                if (min &gt; a[j+1]) {<br>                    min = a[j+1];<br>                    index = j+1;<br>                }<br>            }<br>            //最小值a[index]与放未排序的首位a[i-1]互换位置<br>            if (index != i-1) {<br>                int temp = a[i-1];<br>                a[i-1] = a [index];<br>                a [index] = temp;<br>            }<br>        }<br>        return a;<br>    }</p>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。<br>时间复杂度是O(n^2)。</p>
 <p>/*<em>希尔排序的原理:根据需求，如果你想要结果从大到小排列，它会首先将数组进行分组，然后将较大值移到前面，较小值移到后面，最后将整个数组进行插入排序，这样比起一开始就用插入排序减少了数据交换和移动的次数，可以说希尔排序是加强版的插入排序<br>拿数组5, 2, 8, 9, 1, 3，4来说，数组长度为7，当increment为3时，数组分为两个序列5，2，8和9，1，3，4，第一次排序，9和5比较，1和2比较，3和8比较，4和比其下标值小increment的数组值相比较<br>此例子是按照从大到小排列，所以大的会排在前面，第一次排序后数组为9, 2, 8, 5, 1, 3，4<br>第一次后increment的值变为3/2=1,此时对数组进行插入排序，实现数组从大到小排
  </em>/</p>
 <pre><code>public static void shellSort(int[] data) 
