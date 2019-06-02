@@ -116,13 +116,29 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="My blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="二叉树遍历前序：根左右中序：左根右后序：左右根 B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Left和Right）；2.所有结点存储一个关键字；3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入右儿子；">
+<meta name="keywords" content="二叉树,排序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构和算法总结">
+<meta property="og:url" content="http://yoursite.com/2019/05/14/alg/index.html">
 <meta property="og:site_name" content="My blog">
+<meta property="og:description" content="二叉树遍历前序：根左右中序：左根右后序：左右根 B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Left和Right）；2.所有结点存储一个关键字；3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入右儿子；">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/myimages/1.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/2.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/3.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/4.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/5.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/6.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/7.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/8.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/9.jpg">
+<meta property="og:image" content="http://yoursite.com/myimages/10.png">
+<meta property="og:updated_time" content="2019-06-02T12:11:32.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My blog">
+<meta name="twitter:title" content="数据结构和算法总结">
+<meta name="twitter:description" content="二叉树遍历前序：根左右中序：左根右后序：左右根 B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Left和Right）；2.所有结点存储一个关键字；3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入右儿子；">
+<meta name="twitter:image" content="http://yoursite.com/myimages/1.jpg">
 
 
 
@@ -130,7 +146,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/14/alg/">
 
 
 
@@ -140,7 +156,7 @@
   };
 </script>
 
-  <title>My blog</title>
+  <title>数据结构和算法总结 | My blog</title>
   
 
 
@@ -189,8 +205,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -228,7 +243,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -353,661 +368,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/java/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lhh">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/14/java/" class="post-title-link" itemprop="url">Java基础总结</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          
-            <i class="fa fa-thumb-tack"></i>
-            <font color="7D26CD">置顶</font>
-            <span class="post-meta-divider">|</span>
-          
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-14 08:51:07" itemprop="dateCreated datePublished" datetime="2019-05-14T08:51:07+08:00">2019-05-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-02 20:28:53" itemprop="dateModified" datetime="2019-06-02T20:28:53+08:00">2019-06-02</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">7.9k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">7 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              重载（Overload）和重写（Override）的区别？方法的重载和重写都是实现多态的方式&gt;，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/14/java/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/spring/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lhh">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/14/spring/" class="post-title-link" itemprop="url">框架总结</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-14 09:51:07" itemprop="dateCreated datePublished" datetime="2019-05-14T09:51:07+08:00">2019-05-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-02 20:32:13" itemprop="dateModified" datetime="2019-06-02T20:32:13+08:00">2019-06-02</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/框架/" itemprop="url" rel="index"><span itemprop="name">框架</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">4.3k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">4 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              Spring事务传播特性PROPAGATION_REQUIRED–支持当前事务，如果当前没有事务，就新建一个事务。这是最常见的选择。PROPAGATION_SUPPORTS–支持当前事务，如果当前没有
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/14/spring/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/14/database/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lhh">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/logo.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="My blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/14/database/" class="post-title-link" itemprop="url">数据库总结</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-14 09:51:07" itemprop="dateCreated datePublished" datetime="2019-05-14T09:51:07+08:00">2019-05-14</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-02 20:27:43" itemprop="dateModified" datetime="2019-06-02T20:27:43+08:00">2019-06-02</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">8.9k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">8 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              JDBC操作数据库的步骤1.注册数据库驱动。2.建立数据库连接。3.创建一个Statement。4.执行SQL语句。5.处理结果集。6.关闭数据库连接        Connection connec
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/14/database/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -1039,10 +402,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/14/alg/" class="post-title-link" itemprop="url">数据结构和算法总结</a>
+          <h1 class="post-title" itemprop="name headline">数据结构和算法总结
+
               
             
           </h1>
@@ -1165,23 +526,84 @@
       
 
       
-        
-          
-            <p>
-              二叉树遍历前序：根左右中序：左根右后序：左右根
-B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Left和Right）；2.所有结点存储一个关键字；3.非叶子结点的左指针指向小于其关键字的
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/14/alg/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <h1 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h1><p>前序：根左右<br>中序：左根右<br>后序：左右根</p>
+<h1 id="B-、B-树"><a href="#B-、B-树" class="headerlink" title="B+、B-树"></a>B+、B-树</h1><p>二叉搜索树：<br>1.所有非叶子结点至多拥有两个儿子（Left和Right）；<br>2.所有结点存储一个关键字；<br>3.非叶子结点的左指针指向小于其关键字的子树，右指针指向大于其关键字的子树；<br><img src="/myimages/1.jpg" alt="二叉搜索树"><br>二叉搜索树的搜索，从根结点开始，如果查询的关键字与结点的关键字相等，那么就命中；否则，如果查询关键字比结点关键字小，就进入左儿子；如果比结点关键字大，就进入<br>右儿子；如果左儿子或右儿子的指针为空，则报告找不到相应的关键字。<br>B-树：<br>是一种多路搜索树（并不是二叉的）：<br>1.定义任意非叶子结点最多只有M个儿子；且M&gt;2；<br>2.根结点的儿子数为[2, M]；<br>3.除根结点以外的非叶子结点的儿子数为[M/2, M]；<br>4.每个结点存放至少M/2-1（取上整）和至多M-1个关键字；（至少2个关键字）<br>5.非叶子结点的关键字个数=指向儿子的指针个数-1；<br>6.非叶子结点的关键字：K[1], K[2], …, K[M-1]；且K[i] &lt; K[i+1]；<br>7.非叶子结点的指针：P[1], P[2], …, P[M]；其中P[1]指向关键字小于K[1]的子树，P[M]指向关键字大于K[M-1]的子树，其它P[i]指向关键字属于(K[i-1], K[i])的子树；<br>8.所有叶子结点位于同一层；<br><img src="/myimages/2.jpg" alt="图片"><br>B-树的搜索，从根结点开始，对结点内的关键字（有序）序列进行二分查找，如果命中则结束，否则进入查询关键字所属范围的儿子结点；重复，直到所对应的儿子指针为空，或已经是叶子结点；<br>B+树：<br>B+树是B-树的变体，也是一种多路搜索树：<br>1.其定义基本与B-树同，除了：<br>2.非叶子结点的子树指针与关键字个数相同；<br>3.非叶子结点的子树指针P[i]，指向关键字值属于[K[i], K[i+1])的子树（B-树是开区间）；<br>5.为所有叶子结点增加一个链指针；<br>6.所有关键字都在叶子结点出现；<br><img src="/myimages/3.jpg" alt="图片"><br>B+的搜索与B-树也基本相同，区别是B+树只有达到叶子结点才命中（B-树可以在非叶子结点命中），其性能也等价于在关键字全集做一次二分查找。</p>
+<h1 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h1><p>哈夫曼树，又称最优树，是一类带权路径长度最短的树。<br>从树中一个结点到另一个结点之间的分支构成两个结点的路径，路径上的分支数目叫做路径长度。<br>树的路径长度是从树根到每一个结点的路径长度之和。<br>结点的带权路径长度为从该结点到树根之间的路径长度与结点上权的乘积。<br>树的带权路径长度为树中所有叶子结点的带权路径长度之和，通常记作WPL。<br>创建哈夫曼树：<br>假设有n个结点，n个结点的权值分别为w1,w2,…,wn，构成的二叉树的集合为F={T1,T2,…,Tn}，则可构造一棵含有n个叶子结点的哈夫曼树。步骤如下：<br>（1）从F中选取两棵根结点权值最小的树作为左右子树构造一棵新的二叉树，其新的二叉树的权值为其左右子树根结点权值之和；<br>（2）从F中删除上一步选取的两棵二叉树，将新构造的树放到F中；<br>（3）重复（1）（2），直到F只含一棵树为止。<br> <img src="/myimages/4.jpg" alt="图片"></p>
+<h1 id="冒泡、插入、选择、希尔排序"><a href="#冒泡、插入、选择、希尔排序" class="headerlink" title="冒泡、插入、选择、希尔排序"></a>冒泡、插入、选择、希尔排序</h1><h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>基本的逻辑是，取第一个元素与后一个比较，如果大于后者，就与后者互换位置，不大于，就保持位置不变。再拿第二个元素与后者比较，如果大于后者，就与后者互换位置。一轮比较之后，最大的元素就移动到末尾。相当于最大的就冒出来了。再进行第二轮，第三轮，直到排序完毕。<br>平均情况时间复杂度为O(n^2)。<br> <img src="/myimages/5.jpg" alt="图片"><br>public int[] bubbleSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i = 1; i &lt; n; i++) {<br>boolean flag = false; // 开关，当某次内层循环，没有数据交换时，已排好顺序，直接跳出循环。<br>            for (int j = 0; j &lt; n - i; j++) {<br>                if (a[j] &gt; a[j + 1]) {<br>                    int temp = a[j];<br>                    a[j] = a[j + 1];<br>                    a[j + 1] = temp;<br>                    flag = true;<br>                }<br>            }<br>            if (!flag) {<br>                break;<br>            }<br>        }<br>        return a;<br>    }</p>
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><p>基本逻辑是，把元素分为已排序的和未排序的。每次从未排序的元素取出第一个，与已排序的元素从尾到头逐一比较，找到插入点，将之后的元素都往后移一位，腾出位置给该元素。<br>平均情况时间复杂度是O(n^2)。<br> <img src="/myimages/6.jpg" alt="图片"><br>public int[] insertSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i = 1; i &lt; n; i++) {<br>            int temp = a[i];<br>            int j = i - 1;<br>            for (; j &gt;= 0; j–) {<br>                if (a[j] &gt; temp) {<br>                    a[j + 1] = a[j]; // 比temp 大的已排序数据后移一位<br>                } else {<br>                    break;<br>                }<br>            }<br>            a[j + 1] = temp; // 空出来的位置，把temp放进去<br>        }<br>        return a;<br>    }</p>
+<h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><p>基本逻辑是：把所有数据分为已排序区间和未排序区间。每次从未排序区间中，选出最小值，之后将该值与未排序区间第一个元素互换位置，此时已排序区间元素个数多了一个，未排序区间内的元素少了一个。如此循环直到未排序区间没有元素为止。<br>平均情况时间复杂度是O(n^2)。<br> <img src="/myimages/7.jpg" alt="图片"><br>public int[] selectionSort(int[] a) {<br>        int n = a.length;<br>        if (n &lt;= 1) {<br>            return a;<br>        }<br>        for (int i =1; i &lt; n; i++) {<br>            int j = i-1;<br>            int min = a[j]; // 最小的数值<br>            int index = j; // 最小值对应的下标<br>            for (; j &lt; n-1 ; j++) {<br>                if (min &gt; a[j+1]) {<br>                    min = a[j+1];<br>                    index = j+1;<br>                }<br>            }<br>            //最小值a[index]与放未排序的首位a[i-1]互换位置<br>            if (index != i-1) {<br>                int temp = a[i-1];<br>                a[i-1] = a [index];<br>                a [index] = temp;<br>            }<br>        }<br>        return a;<br>    }</p>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><p>先将整个待排序的记录序列分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。<br>时间复杂度是O(n^2)。<br>/*<em>希尔排序的原理:根据需求，如果你想要结果从大到小排列，它会首先将数组进行分组，然后将较大值移到前面，较小值移到后面，最后将整个数组进行插入排序，这样比起一开始就用插入排序减少了数据交换和移动的次数，可以说希尔排序是加强版的插入排序<br>拿数组5, 2, 8, 9, 1, 3，4来说，数组长度为7，当increment为3时，数组分为两个序列5，2，8和9，1，3，4，第一次排序，9和5比较，1和2比较，3和8比较，4和比其下标值小increment的数组值相比较<br>此例子是按照从大到小排列，所以大的会排在前面，第一次排序后数组为9, 2, 8, 5, 1, 3，4<br>第一次后increment的值变为3/2=1,此时对数组进行插入排序，实现数组从大到小排
+ </em>/</p>
+<pre><code>public static void shellSort(int[] data) 
+{
+    int j = 0;
+    int temp = 0;
+    //每次将步长缩短为原来的一半
+    for (int increment = data.length / 2; increment &gt; 0; increment /= 2)
+    {
+    for (int i = increment; i &lt; data.length; i++) 
+    {
+        temp = data[i];
+        for (j = i; j &gt;= increment; j -= increment) 
+        {
+        if(temp &gt; data[j - increment])//如想从小到大排只需修改这里
+        {   
+            data[j] = data[j - increment];
+        }
+        else
+        {
+            break;
+        }
+
+        } 
+        data[j] = temp;
+    }
+
+    }
+}
+</code></pre><h1 id="归并、快速、堆排序"><a href="#归并、快速、堆排序" class="headerlink" title="归并、快速、堆排序"></a>归并、快速、堆排序</h1><h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><p>如果要排序一个数组，我们先把数组从中间分成前后两个部分，然后对前后两个部分分别排序，再将两个部分合并在一直，这个整个数组就是一个有序的数组了。<br>平均情况时间复杂度是O(nlogn)。<br> <img src="/myimages/8.jpg" alt="图片"><br>   public static int[] sort(int[] nums, int low, int high) {<br>        int mid = (low + high) / 2;<br>        if (low &lt; high) {<br>            // 左边<br>            sort(nums, low, mid);<br>            // 右边<br>            sort(nums, mid + 1, high);<br>            // 左右归并<br>            merge(nums, low, mid, high);<br>        }<br>        return nums;<br>    }</p>
+<pre><code>/**
+ * 将数组中low到high位置的数进行排序
+ * @param nums 待排序数组
+ * @param low 待排的开始位置
+ * @param mid 待排中间位置
+ * @param high 待排结束位置
+ */
+public static void merge(int[] nums, int low, int mid, int high) {
+    int[] temp = new int[high - low + 1];
+    int i = low;// 左指针
+    int j = mid + 1;// 右指针
+    int k = 0;
+    // 把较小的数先移到新数组中
+    while (i &lt;= mid &amp;&amp; j &lt;= high) {
+        if (nums[i] &lt; nums[j]) {
+            temp[k++] = nums[i++];
+        } else {
+            temp[k++] = nums[j++];
+        }
+    }
+    // 把左边剩余的数移入数组
+    while (i &lt;= mid) {
+        temp[k++] = nums[i++];
+    }
+    // 把右边边剩余的数移入数组
+    while (j &lt;= high) {
+        temp[k++] = nums[j++];
+    }
+
+    // 把新数组中的数覆盖nums数组
+    for (int k2 = 0; k2 &lt; temp.length; k2++) {
+        nums[k2 + low] = temp[k2];
+    }
+}
+</code></pre><h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>快速排序（Quicksort）算法也是利用分治思想，有点像归并排序，但思路不一样。待会我们再讲两者的区别。它的思想是这样的：如果要排序的数组中下标从p到r 之间的一组数据，我们选择 p 到 r 之间的任意一个数据作为pivot(分区点)。<br>我们遍历 p 到 r 之间的数据，将小于 pivot 的放在左边，将大于 pivot 的放到右边，将pivot放到中间。经过这一步骤，数组 p 到 r 之间数据被分成了三个部分，前面 p 到 q-1 之间的都是小于pivot的，中间是pivot,后面的 q+1到 r 之间的是大于pivot的。<br> <img src="/myimages/9.jpg" alt="图片"><br>我们用递归排序下标从p 到 q-1 之间的数据和下标从q+1到 r 之间的数据，直到分区缩小为1，这时所有的数据就都有序了。<br>平均情况时间复杂度是O(nlogn)。</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p>堆是一种特殊的树形数据结构，其每个节点都有一个值，通常提到的堆都是指一颗完全二叉树，根结点的值小于（或大于）两个子节点的值，同时，根节点的两个子树也分别是一个堆。<br> <img src="/myimages/10.png" alt="图片"><br>堆排序就是利用堆（假设利用大顶堆）进行排序的方法。它的基本思想是，将待排序的序列构造成一个大顶堆。此时，整个序列的最大值就是堆顶的根节点。将它移走（其实就是将其与堆数组的末尾元素交换，此时末尾元素就是最大值），然后将剩余的 n-1 个序列重新构造成一个堆，这样就会得到 n 个元素中次大的值。如此反复执行，便能得到一个有序序列了。</p>
+<h1 id="ArrayList和Vector的区别"><a href="#ArrayList和Vector的区别" class="headerlink" title="ArrayList和Vector的区别"></a>ArrayList和Vector的区别</h1><p>共同点：<br>    &emsp;这两个类都实现了List接口，它们都是有序的集合(存储有序)，底层是数组。我们可以按位置索引号取出某个元素，允许元素重复和为null。<br>区别：<br>    &emsp;同步性：<br>        &emsp;&emsp;ArrayList是非同步的<br>        &emsp;&emsp;Vector是同步的<br>        &emsp;&emsp;即便需要同步的时候，我们可以使用Collections工具类来构建出同步的ArrayList而不用Vector<br>    &emsp;扩容大小：<br>        &emsp;&emsp;Vector增长原来的一倍，ArrayList增长原来的0.5倍</p>
+<h1 id="HashMap和Hashtable的区别"><a href="#HashMap和Hashtable的区别" class="headerlink" title="HashMap和Hashtable的区别"></a>HashMap和Hashtable的区别</h1><p>共同点：<br>    &emsp;从存储结构和实现来讲基本上都是相同的，都是实现Map接口~<br>区别：<br>    &emsp;同步性：<br>        &emsp;&emsp;HashMap是非同步的<br>        &emsp;&emsp;Hashtable是同步的<br>        &emsp;&emsp;需要同步的时候，我们往往不使用，而使用ConcurrentHashMap<br>    &emsp;是否允许为null：<br>        &emsp;&emsp;HashMap允许为null<br>        &emsp;&emsp;Hashtable不允许为null<br>    &emsp;继承不同：<br>        &emsp;&emsp;HashMap&lt;K,V&gt; extends AbstractMap&lt;K,V&gt;<br>        &emsp;&emsp;public class Hashtable&lt;K,V&gt; extends Dictionary&lt;K,V&gt;</p>
+<h1 id="List和Map的区别"><a href="#List和Map的区别" class="headerlink" title="List和Map的区别"></a>List和Map的区别</h1><p>共同点：<br>&emsp;都是Java常用的容器，都是接口<br>不同点：<br>&emsp;存储结构不同：<br>&emsp;&emsp;List是存储单列的集合<br>&emsp;&emsp;Map存储的是key-value键值对的集合<br>&emsp;元素是否可重复：<br>&emsp;&emsp;List允许元素重复<br>&emsp;&emsp;Map不允许key重复<br>&emsp;是否有序：<br>&emsp;&emsp;List集合是有序的(存储有序)<br>&emsp;&emsp;Map集合是无序的(存储无序)</p>
+<h1 id="Collection和Collections的区别"><a href="#Collection和Collections的区别" class="headerlink" title="Collection和Collections的区别"></a>Collection和Collections的区别</h1><p>Collection是集合的上级接口，继承它的有Set和List接口<br>Collections是集合的工具类，提供了一系列的静态方法对集合的搜索、查找、同步等操作</p>
+<h1 id="说出ArrayList-LinkedList的存储性能和特性"><a href="#说出ArrayList-LinkedList的存储性能和特性" class="headerlink" title="说出ArrayList,LinkedList的存储性能和特性"></a>说出ArrayList,LinkedList的存储性能和特性</h1><p>ArrayList的底层是数组，LinkedList的底层是双向链表。<br>ArrayList它支持以角标位置进行索引出对应的元素(随机访问)，而LinkedList则需要遍历整个链表来获取对应的元素。因此一般来说ArrayList的访问速度是要比LinkedList要快的<br>ArrayList由于是数组，对于删除和修改而言消耗是比较大(复制和移动数组实现)，LinkedList是双向链表删除和修改只需要修改对应的指针即可，消耗是很小的。因此一般来说LinkedList的增删速度是要比ArrayList要快的</p>
+
       
     </div>
 
@@ -1202,18 +624,52 @@ B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Le
 
     <div>
       
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/二叉树/" rel="tag"><i class="fa fa-tag"></i> 二叉树</a>
+          
+            <a href="/tags/排序/" rel="tag"><i class="fa fa-tag"></i> 排序</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/14/java/" rel="next" title="Java基础总结">
+                <i class="fa fa-chevron-left"></i> Java基础总结
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/14/database/" rel="prev" title="数据库总结">
+                数据库总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -1223,14 +679,15 @@ B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Le
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1250,8 +707,17 @@ B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Le
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1404,6 +870,23 @@ B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Le
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#二叉树遍历"><span class="nav-number">1.</span> <span class="nav-text">二叉树遍历</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-、B-树"><span class="nav-number">2.</span> <span class="nav-text">B+、B-树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#哈夫曼树"><span class="nav-number">3.</span> <span class="nav-text">哈夫曼树</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡、插入、选择、希尔排序"><span class="nav-number">4.</span> <span class="nav-text">冒泡、插入、选择、希尔排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">4.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入排序"><span class="nav-number">4.2.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择排序"><span class="nav-number">4.3.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">4.4.</span> <span class="nav-text">希尔排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#归并、快速、堆排序"><span class="nav-number">5.</span> <span class="nav-text">归并、快速、堆排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#归并排序"><span class="nav-number">5.1.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">5.2.</span> <span class="nav-text">快速排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">5.3.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ArrayList和Vector的区别"><span class="nav-number">6.</span> <span class="nav-text">ArrayList和Vector的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HashMap和Hashtable的区别"><span class="nav-number">7.</span> <span class="nav-text">HashMap和Hashtable的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#List和Map的区别"><span class="nav-number">8.</span> <span class="nav-text">List和Map的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Collection和Collections的区别"><span class="nav-number">9.</span> <span class="nav-text">Collection和Collections的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#说出ArrayList-LinkedList的存储性能和特性"><span class="nav-number">10.</span> <span class="nav-text">说出ArrayList,LinkedList的存储性能和特性</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -1545,6 +1028,10 @@ B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Le
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -1560,6 +1047,8 @@ B+、B-树二叉搜索树：1.所有非叶子结点至多拥有两个儿子（Le
 
   
 
+
+  
 
 
   
